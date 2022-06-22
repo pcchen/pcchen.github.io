@@ -1,0 +1,38 @@
+# Curriculum Vitae
+
+## Name
+* Pochung Chen (陳柏中)[Tân, Pektiong]
+
+## EMail
+* pcchen {at} phys.nthu.edu.tw
+
+## Employment:
+
+* Aug 2014 onward
+  * **Professor**, [Department of Physics](http://www.phys.nthu.edu.tw), [National Tsing Hua University](http://www.nthu.edu.tw), Taiwan.
+
+* Aug 2008-Aug 2014
+  * **Associated Professor**, Department of Physics, National Tsing Hua University, Taiwan.
+
+* Jan 2004-Aug 2008
+  * **Assistant Professor**, Department of Physics, National Tsing Hua University, Taiwan.
+
+* Sep 2002-Jan 2004
+  * **Postdoctoral Researcher**, Department of Chemistry, University of California Berkeley, USA.
+
+## Research Employment:
+* Aug 2012-Aug 2014
+  * Center Scientist, Physics Division, National Center for Theoretical Sciences, Taiwan.
+
+* Feb 2007- Aug 2007
+  * Visiting Scientist, Department of Physics, University of California San Diego, USA.
+
+## Award
+* 2012 Young Scientist Award, Physics Division, National Center for Theoretical Science, Taiwan.
+
+## Education:
+* Sep 1997-Sep 2002:
+  * Ph.D., Department of Physics, University of California San Diego, USA.
+
+* Sep 1990-Sep 1994:
+  * B.S., Department of Physics, National Tsing Hua University, Taiwan.

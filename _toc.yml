@@ -7,3 +7,7 @@ chapters:
 - file: cv
 - file: members
 - file: publications
+- file: teaching
+  sections:
+  - file: teaching/11210PHYS113403
+  - file: teaching/11210PHYS523500

@@ -7,6 +7,7 @@
 ## Preprints
 
 ## Peer Reviewed Publications
+* [43] Ching-Yu Huang, Sing-Hong Chan, Ying-Jer Kao, **Pochung Chen**, <br>*Tensor Network Based Finite-Size Scaling for Two-Dimensional Classical Models*, [Phys. Rev. B **107**, 205123 (2023)](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.205123).
 * [42] Yao-Tai Kang, Chung-Yu Lo, Masaki Oshikawa, Ying-Jer Kao, **Pochung Chen**, <br>*Two-wire Junction of Inequivalent Tomonaga-Luttinger Liquids*, <br>[Phys. Rev. B, 104, 235142 (2021)](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.235142).
 * [41] Ching-Yu Huang, Yuan-Chun Lu, **Pochung Chen**, *Finite-size scaling analysis of two-dimensional deformed Affleck-Kennedy-Lieb-Tasaki states*, [Phys. Rev. B, 102, 165108 (2020)](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.102.165108).
 * [40] Zheng-Lin Tsai, **Pochung Chen**, Yu-Cheng Lin, *Tensor network renormalization group study of spin-1 random Heisenberg chains*, [Eur. Phys. J. B (2020) 93: 63](https://doi.org/10.1140/epjb/e2020-100585-8).

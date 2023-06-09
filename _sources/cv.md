@@ -6,7 +6,7 @@
 ## EMail
 * pcchen {at} phys.nthu.edu.tw
 
-## Main Positions:
+## Main Positions
 
 * Aug 2014 onward
   * **Professor**, [Department of Physics](http://www.phys.nthu.edu.tw), [National Tsing Hua University](http://www.nthu.edu.tw), Taiwan.
@@ -20,7 +20,7 @@
 * Sep 2002-Jan 2004
   * **Postdoctoral Researcher**, Department of Chemistry, University of California Berkeley, USA.
 
-## Other Positions:
+## Other Positions
 
 * 2021-2022
   * **Center Scientist**, Physics Division, National Center for Theoretical Sciences, Taiwan.

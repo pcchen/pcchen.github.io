@@ -1,13 +1,24 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
+# Each entry has the following schema:
+#
+# - title: mytitle   # Title of chapter or subchapter
+#   file: myfile  # filename relative to the  folder.
+#   sections:  # Contains a list of more entries that make up the chapter's subchapters
+#
+# Below are some special values that trigger specific behavior:
+# - header: My Header  # Will insert a header with no link in the sidebar
 
 format: jb-book
 root: intro
-chapters:
-- file: cv
-- file: members
-- file: publications
-- file: teaching
-  sections:
-  - file: teaching/11210PHYS113403
-  - file: teaching/11210PHYS523500
+parts:
+  - title: Name of Part 1
+    chapters:
+    # - file: path/to/part1/chapter1  # -  chapters:
+    - file: cv
+    - file: members
+    - file: publications
+  - caption: Teaching
+    chapters:
+    - file: teaching/11210PHYS113403
+    - file: teaching/11210PHYS523500

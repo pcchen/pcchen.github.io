@@ -21,6 +21,9 @@
   * **Postdoctoral Researcher**, Department of Chemistry, University of California Berkeley, USA.
 
 ## Other Positions
+* 2022-Now
+  * **Editorial Board Members**, [International Journal of Modern Physics B(IJMPB)](https://www.worldscientific.com/worldscinet/ijmpb).
+  * **Editorial Board Members**, [Modern Physics Letters B(MPLB)](https://www.worldscientific.com/worldscinet/mplb).
 
 * 2021-2023
   * **Center Scientist**, Physics Division, National Center for Theoretical Sciences, Taiwan.

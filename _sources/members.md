@@ -13,11 +13,12 @@
 * 林彥彤
   * 2020/9-Now, Ph.D. Student.
 * Sing-Hong Chan 陳星宏
-  * 2020/9-Now, Master Student.
-* 劉少輔
-  * 2019/9-Now, Master Student.
+  * 2020/9-2023/7, Master.
+  * 2023/9-Now, Ph.D. Student.
 
 ## Former Members
+* Mr. 劉少輔
+  * 2019/9-2022/7, Master Student.
 * Dr. Yao-Tai Kang [康耀太博士](https://eee.zqu.edu.cn/info/1007/2264.htm)
   * 2018/3-2020/7, Postdoc.
   * ⟹ 2020/8-Now, Associated Professor, Zhao-Qing University, China.

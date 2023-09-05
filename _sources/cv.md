@@ -22,11 +22,20 @@
 
 ## Other Positions
 * 2022-Now
+  * **Board of directors** and **director of division of publication**, [The Physical Society of Taiwan](https://www.ps-taiwan.org/en), Taiwan.
+
+* 2022-Now
+  * **Director**, [Physics Research Promotion Center(PRPC)](http://prpc.phys.nthu.edu.tw), Taiwan.
+
+* 2022-Now
   * **Editorial Board Members**, [International Journal of Modern Physics B(IJMPB)](https://www.worldscientific.com/worldscinet/ijmpb).
   * **Editorial Board Members**, [Modern Physics Letters B(MPLB)](https://www.worldscientific.com/worldscinet/mplb).
 
+* 2021-Now
+  * **Director**, [Center for Theory and Computation(CTC)](http://www.ctc.nthu.edu.tw/), National Tsing Hua University, Taiwan.
+
 * 2021-2023
-  * **Center Scientist**, Physics Division, National Center for Theoretical Sciences, Taiwan.
+  * **Center Scientist** and **coordinator**, [TG4.1: High-performance computation and machine learning](https://www.phys.ncts.ntu.edu.tw/en/program/Thematic_Groups/TG4_1), Physics Division, National Center for Theoretical Sciences, Taiwan.
 
 * Aug 2012-Aug 2014
   * **Center Scientist**, Physics Division, National Center for Theoretical Sciences, Taiwan.

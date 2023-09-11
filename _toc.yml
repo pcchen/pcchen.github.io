@@ -22,3 +22,4 @@ parts:
     chapters:
     - file: teaching/11210PHYS113403
     - file: teaching/11210PHYS523500
+    # - file: teaching/GeneralPhysics

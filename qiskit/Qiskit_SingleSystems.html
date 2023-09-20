@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Single Systems &#8212; Qubit</title>
+    <title>Qiskit: Single Systems &#8212; Qubit</title>
   
   
   
@@ -66,6 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'qiskit/Qiskit_SingleSystems';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="111210PHYS523500" href="../teaching/11210PHYS523500.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,13 +157,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../teaching/11210PHYS113403.html">11210PHYS113403</a></li>
 
 
 <li class="toctree-l1"><a class="reference internal" href="../teaching/11210PHYS523500.html">111210PHYS523500</a></li>
 
 
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Qiskit: Single Systems</a></li>
 </ul>
 
     </div>
@@ -346,7 +348,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Single Systems</h1>
+    <h1>Qiskit: Single Systems</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -382,10 +384,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="single-systems">
-<h1>Single Systems<a class="headerlink" href="#single-systems" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="qiskit-single-systems">
+<h1>Qiskit: Single Systems<a class="headerlink" href="#qiskit-single-systems" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
-<li><p>Last updated on 9/15/2023</p></li>
+<li><p>Last updated on 9/20/2023</p></li>
+<li><p>Ref: <a class="reference external" href="https://learning.quantum-computing.ibm.com/course/basics-of-quantum-information/single-systems">https://learning.quantum-computing.ibm.com/course/basics-of-quantum-information/single-systems</a></p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -493,7 +496,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1861</span><span class="o">/</span><span class="mf">3907888485.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1890</span><span class="o">/</span><span class="mf">3907888485.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Statevector</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;qiskit&#39;
@@ -615,23 +618,6 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">~</span><span class="n">u</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">44</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="o">~</span><span class="n">u</span>
-
-<span class="ne">TypeError</span>: bad operand type for unary ~: &#39;Statevector&#39;
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="check-a-statevector">
 <h3>Check a statevector<a class="headerlink" href="#check-a-statevector" title="Permalink to this heading">#</a></h3>
@@ -679,6 +665,8 @@ document.write(`
 <section id="measurement-of-a-statevector">
 <h3>Measurement of a statevector<a class="headerlink" href="#measurement-of-a-statevector" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ket.measure()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ket.sample_count()</span></code></p></li>
 <li><p>The quantum state is projected onto the standard basis.</p></li>
 <li><p>The original quantum state is NOT distroyed.</p></li>
 </ul>
@@ -727,8 +715,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;0&#39;,
- Statevector([0.4472136+0.89442719j, 0.       +0.j        ],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;1&#39;,
+ Statevector([ 0.+0.j, -1.+0.j],
              dims=(2,)))
 </pre></div>
 </div>
@@ -762,7 +750,7 @@ document.write(`
             dims=(2,))
 1 Statevector([ 0.+0.j, -1.+0.j],
             dims=(2,))
-1 Statevector([ 0.+0.j, -1.+0.j],
+0 Statevector([0.4472136+0.89442719j, 0.       +0.j        ],
             dims=(2,))
 1 Statevector([ 0.+0.j, -1.+0.j],
             dims=(2,))
@@ -774,7 +762,7 @@ document.write(`
             dims=(2,))
 1 Statevector([ 0.+0.j, -1.+0.j],
             dims=(2,))
-0 Statevector([0.4472136+0.89442719j, 0.       +0.j        ],
+1 Statevector([ 0.+0.j, -1.+0.j],
             dims=(2,))
 </pre></div>
 </div>
@@ -802,10 +790,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;0&#39;: 547, &#39;1&#39;: 453}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;0&#39;: 572, &#39;1&#39;: 428}
 </pre></div>
 </div>
-<img alt="../_images/696cd0b3d85e29b3fc110c7989c4e893ad55e4b80add4952e8ebe099284fcc88.png" src="../_images/696cd0b3d85e29b3fc110c7989c4e893ad55e4b80add4952e8ebe099284fcc88.png" />
+<img alt="../_images/18c5095cf0b84234c5f153ab52959a51e7b47950eab9b3b2d75c77ab6dc1f17e.png" src="../_images/18c5095cf0b84234c5f153ab52959a51e7b47950eab9b3b2d75c77ab6dc1f17e.png" />
 </div>
 </div>
 </section>
@@ -963,7 +951,7 @@ q: ┤ H ├┤ T ├
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/eb1c019e489a6b0670b39c2e569bbaefa2e4a445855229b7d3865dce64a95c49.png" src="../_images/eb1c019e489a6b0670b39c2e569bbaefa2e4a445855229b7d3865dce64a95c49.png" />
+<img alt="../_images/38e402e713327a54416a415b1bdfc4cccd263abcaf973eccf9d67c5e65c45c88.png" src="../_images/38e402e713327a54416a415b1bdfc4cccd263abcaf973eccf9d67c5e65c45c88.png" />
 </div>
 </div>
 </section>
@@ -1001,6 +989,15 @@ q: ┤ H ├┤ T ├
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../teaching/11210PHYS523500.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">111210PHYS523500</p>
+      </div>
+    </a>
 </div></div>
   
 </div>

@@ -61,6 +61,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'teaching/11210PHYS523500';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -432,11 +434,11 @@ document.write(`
 <section id="assignments">
 <h2>Assignments<a class="headerlink" href="#assignments" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Quantum measurement.</p></li>
-<li><p>Deutsch-Jozsa algorithm.</p></li>
-<li><p>Grover’s algorithm.</p></li>
-<li><p>Variational Quantum Eigensolver (VQE)</p></li>
-<li></li>
+<li><p>Implement Deutsch-Jozsa algorithm (without noise)</p></li>
+<li><p>Implement T1, T2, T2* experiment (with noise)</p></li>
+<li><p>Implement Deutsch-Jozsa algorithm (with noise)</p></li>
+<li><p>Run HW(1) and HW(2) on real device</p></li>
+<li><p>Implement Grover search algorithm (without noise). You should first implement the quantum oracle <span class="math notranslate nohighlight">\(U_f(|x\rangle_n |y\rangle_1)=|x\rangle_n|y\oplus f(x)\rangle_1\)</span>. First try 3-bit integer x, then try 5-bit integer x. (without noise)</p></li>
 </ol>
 </section>
 <section id="links">

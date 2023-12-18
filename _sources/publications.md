@@ -5,11 +5,11 @@
 * [Pochung Chen@Google Scholar](https://scholar.google.com.tw/citations?hl=en&user=blbepnIAAAAJ&view_op=list_works&sortby=pubdate)
 
 ## Preprints
-* Kai-Hsin Wu, Chang-Teng Lin, Ke Hsu, Hao-Ti Hung, Manuel Schneider, Chia-Min Chung, Ying-Jer Kao, **Pochung Cheng**,<br>*The Cytnx Library for Tensor Networks*.
+* Kai-Hsin Wu, Chang-Teng Lin, Ke Hsu, Hao-Ti Hung, Manuel Schneider, Chia-Min Chung, Ying-Jer Kao, **Pochung Chen**,<br>*The Cytnx Library for Tensor Networks*, submitted to SciPost Physics Codebases. https://scipost.org/submissions/scipost_202312_00013v1/
 
 ## Peer Reviewed Publications
 * [44] Yen-Tung Lin,Shao-Fu Liu, **Pochung Chen**, Yu-Cheng Lin,
-<br>*Random singlets and permutation symmetry in the disordered spin-2 Heisenberg chain: A tensor network renormalization group study*, [arXiv:2309.04249](https://arxiv.org/abs/2309.04249), to appear in Phys. Rev. Research.
+<br>*Random singlets and permutation symmetry in the disordered spin-2 Heisenberg chain: A tensor network renormalization group study*, [Phys. Rev. Research](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.043249).
 
 * [43] Ching-Yu Huang, Sing-Hong Chan, Ying-Jer Kao, **Pochung Chen**, <br>*Tensor Network Based Finite-Size Scaling for Two-Dimensional Classical Models*, [Phys. Rev. B **107**, 205123 (2023)](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.205123).
 * [42] Yao-Tai Kang, Chung-Yu Lo, Masaki Oshikawa, Ying-Jer Kao, **Pochung Chen**, <br>*Two-wire Junction of Inequivalent Tomonaga-Luttinger Liquids*, <br>[Phys. Rev. B, 104, 235142 (2021)](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.235142).

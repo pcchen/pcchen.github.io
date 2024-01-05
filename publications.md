@@ -5,7 +5,9 @@
 * [Pochung Chen@Google Scholar](https://scholar.google.com.tw/citations?hl=en&user=blbepnIAAAAJ&view_op=list_works&sortby=pubdate)
 
 ## Preprints
-* Kai-Hsin Wu, Chang-Teng Lin, Ke Hsu, Hao-Ti Hung, Manuel Schneider, Chia-Min Chung, Ying-Jer Kao, **Pochung Chen**,<br>*The Cytnx Library for Tensor Networks*, submitted to [SciPost Physics Codebases](https://scipost.org/submissions/scipost_202312_00013v1/).
+* Kai-Hsin Wu, Chang-Teng Lin, Ke Hsu, Hao-Ti Hung, Manuel Schneider, Chia-Min Chung, Ying-Jer Kao, **Pochung Chen**,<br>*The Cytnx Library for Tensor Networks*, [arXiv:2401.01921](https://arxiv.org/abs/2401.01921), submitted to [SciPost Physics Codebases](https://scipost.org/submissions/scipost_202312_00013v1/).
+
+* Debasmita Maiti, Sing-Hong Chan, **Pochung Chen**, <br>*Tensor Network Finite-Size Scaling for Two-Dimensional 3-state Clock Model* [arXiv:2312.14002](https://arxiv.org/abs/2312.14002).
 
 ## Peer Reviewed Publications
 * [44] Yen-Tung Lin,Shao-Fu Liu, **Pochung Chen**, Yu-Cheng Lin,

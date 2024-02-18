@@ -20,9 +20,9 @@ parts:
     - file: publications
   - caption: Teaching
     chapters:
-    - file: teaching/11210PHYS113403
-    - file: teaching/11210PHYS523500
+    # - file: teaching/11210PHYS113403
+    # - file: teaching/11210PHYS523500
     - file: teaching/11220PHYS114403
-    - file: qiskit/Qiskit_SingleSystems
-    - file: qiskit/Qiskit_Aer
+    # - file: qiskit/Qiskit_SingleSystems
+    # - file: qiskit/Qiskit_Aer
     # - file: teaching/GeneralPhysics

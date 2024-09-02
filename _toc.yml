@@ -18,6 +18,7 @@ parts:
     - file: cv
     - file: members
     - file: publications
+    - file: Cytnx
   - caption: Teaching
     chapters:
     # - file: teaching/11210PHYS113403

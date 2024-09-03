@@ -1,0 +1,820 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>11220PHYS114403 &#8212; Qubit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=1fd94587" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'teaching/11220PHYS114403';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11310PHYS113402" href="11310PHYS113402.html" />
+    <link rel="prev" title="Publications" href="../publications.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qubit</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cv.html">Brief CV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../members.html">Members</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">11220PHYS114403</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="11310PHYS113402.html">11310PHYS113402</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fteaching/11220PHYS114403.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/teaching/11220PHYS114403.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>11220PHYS114403</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">11220PHYS114403</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#general-physics-a-ii">General Physics A (II)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a">普通物理Ａ二</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructor">Instructor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teaching-assistant">Teaching Assistant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time">Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#room">Room</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grade">Grade</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#textbooks">Textbooks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-iv-electricity-and-magnetism">Part IV: ELECTRICITY AND MAGNETISM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-v-light-and-optics">Part V: LIGHT AND OPTICS.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-vi-modern-physics">Part VI: MODERN PHYSICS.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weekly-schedule">Weekly schedule</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="phys114403">
+<h1>11220PHYS114403<a class="headerlink" href="#phys114403" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="general-physics-a-ii">
+<h1>General Physics A (II)<a class="headerlink" href="#general-physics-a-ii" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="a">
+<h1>普通物理Ａ二<a class="headerlink" href="#a" title="Link to this heading">#</a></h1>
+<section id="instructor">
+<h2>Instructor<a class="headerlink" href="#instructor" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Prof. Pochung Chen</p></li>
+<li><p>R521, Physics building</p></li>
+<li><p>pcchen {at} phys {dot} nthu {dot} edu {dot} tw</p></li>
+</ul>
+</section>
+<section id="teaching-assistant">
+<h2>Teaching Assistant<a class="headerlink" href="#teaching-assistant" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>陳主倫 alan85385 {at} gmail {dot} com</p></li>
+<li><p>TA session</p>
+<ul>
+<li><p>Thursday 19:00-20:00</p></li>
+<li><p>R502A</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="time">
+<h2>Time<a class="headerlink" href="#time" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>T3T4R3R4</p></li>
+</ul>
+</section>
+<section id="room">
+<h2>Room<a class="headerlink" href="#room" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>General II building, Room 105</p></li>
+</ul>
+</section>
+<section id="grade">
+<h2>Grade<a class="headerlink" href="#grade" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Midterm (45%)+ final (45%) + homework (10%)</p></li>
+<li><p>Scientific calculator is allowed in the exams. (Programming and plotting are not allowed.)</p></li>
+</ul>
+</section>
+<section id="textbooks">
+<h2>Textbooks<a class="headerlink" href="#textbooks" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.tsanghai.com.tw/book_detail.php?c=264&amp;amp;no=3826#p=1">Physics for Scientists and Engineers &amp; with Modern Physics 10/e (Serway and Jewett)</a></p></li>
+<li><p><a class="reference external" href="https://github.com/quantum-visualizations/qmsolve">QMsolve: A module for solving and visualizing the Schrödinger equation</a></p></li>
+</ul>
+<section id="part-iv-electricity-and-magnetism">
+<h3>Part IV: ELECTRICITY AND MAGNETISM<a class="headerlink" href="#part-iv-electricity-and-magnetism" title="Link to this heading">#</a></h3>
+<ol class="arabic simple" start="22">
+<li><p>Electric Fields.</p></li>
+<li><p>Continuous Charge Distributions and Gauss’s Law.</p></li>
+<li><p>Electric Potential.</p></li>
+<li><p>Capacitance and Dielectrics.</p></li>
+<li><p>Current and Resistance.</p></li>
+<li><p>Direct Current Circuits.</p></li>
+<li><p>Magnetic Fields.</p></li>
+<li><p>Sources of the Magnetic Field.</p></li>
+<li><p>Faraday’s Law.</p></li>
+<li><p>Inductance.</p></li>
+<li><p>Alternating Current Circuits.</p></li>
+<li><p>Electromagnetic Waves.</p></li>
+</ol>
+</section>
+<section id="part-v-light-and-optics">
+<h3>Part V: LIGHT AND OPTICS.<a class="headerlink" href="#part-v-light-and-optics" title="Link to this heading">#</a></h3>
+<ol class="arabic simple" start="34">
+<li><p>The Nature of Light and the Laws of Geometric Optics.</p></li>
+<li><p>Interference of Light Waves.</p></li>
+<li><p>Diffraction Patterns and Polarization.</p></li>
+</ol>
+</section>
+<section id="part-vi-modern-physics">
+<h3>Part VI: MODERN PHYSICS.<a class="headerlink" href="#part-vi-modern-physics" title="Link to this heading">#</a></h3>
+<ol class="arabic simple" start="38">
+<li><p>Relativity.</p></li>
+<li><p>Introduction to Quantum Physics.</p></li>
+<li><p>Quantum Mechanics.</p></li>
+<li><p>Atomic Physics.</p></li>
+</ol>
+</section>
+</section>
+<section id="homework">
+<h2>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>HW1, due on 3/7/2024</p>
+<ul>
+<li><p>Chapter 22: Pb 23, 28, 33, 41.</p></li>
+<li><p>Chapter 23: Pb 6, 22, 32, 49.</p></li>
+</ul>
+</li>
+<li><p>HW2, due on 3/14/2024</p>
+<ul>
+<li><p>Chapter 24: Pb 9, 23, 25, 45.</p></li>
+<li><p>Chapter 25: Pb 10, 29, 30, 39.</p></li>
+</ul>
+</li>
+<li><p>HW3, due on 3/21/2024</p>
+<ul>
+<li><p>Chapter 26: Pb 19, 28, 37, 45.</p></li>
+<li><p>Chapter 27: Pb 4, 8, 17, 25, 35.</p></li>
+</ul>
+</li>
+<li><p>HW4, due on 4/11/2024</p>
+<ul>
+<li><p>Chapter 28: Pb 17, 23, 34, 41.</p></li>
+<li><p>Chapter 29: Pb 4, 15, 22, 25, 29.</p></li>
+</ul>
+</li>
+<li><p>HW5, due on 4/11/2024</p>
+<ul>
+<li><p>Chapter 30: Pb 4, 15, 22, 44.</p></li>
+<li><p>Chapter 31: Pb 15, 16, 23, 27, 29.</p></li>
+</ul>
+</li>
+<li><p>HW6, due on 4/18/2024</p>
+<ul>
+<li><p>Chapter 32: Pb 6, 12, 15, 21, 31.</p></li>
+<li><p>Chapter 33: Pb 1, 2, 10, 12.</p></li>
+</ul>
+</li>
+<li><p>HW7, due on 5/9/2024</p>
+<ul>
+<li><p>Chapter 34: Pb 6, 10, 25, 45</p></li>
+<li><p>Chapter 36: Pb 10, 16, 22, 35</p></li>
+</ul>
+</li>
+<li><p>HW8, due on 5/30/2024</p>
+<ul>
+<li><p>Chapter 37:Pb 7, 10</p></li>
+<li><p>Chapter 38: Pb 9, 17, 20, 23, 38</p></li>
+</ul>
+</li>
+<li><p>HW9, due on 6/6/2024</p>
+<ul>
+<li><p>Chapter 39: Pb 2, 11, 15, 27, 41</p></li>
+<li><p>Chapter 40: Pb 1, 11, 15, 26, 30</p></li>
+</ul>
+</li>
+<li><p>HW10, due on 6/11/2024</p>
+<ul>
+<li><p>Chapter 41: Pb 3, 7, 12, 18, 19, 26</p></li>
+<li><p>Chapter 42: Pb 3, 7, 18, 27, 32</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="weekly-schedule">
+<h2>Weekly schedule<a class="headerlink" href="#weekly-schedule" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Week 1</p>
+<ul>
+<li><p>2/20/2024: Chapter 22 Electric Fields.</p></li>
+<li><p>2/22/2024: Chapter 23 Continuous Charge Distributions and Gauss’s Law.</p></li>
+</ul>
+</li>
+<li><p>Week 2</p>
+<ul>
+<li><p>2/27/2024: Chapter 24 Electric Potential.</p></li>
+<li><p>3/1/2024: Chapter 25 Capacitance and Dielectrics</p></li>
+</ul>
+</li>
+<li><p>Week 3</p>
+<ul>
+<li><p>3/5/2024: Chapter 26 Current and Resistance.</p></li>
+<li><p>3/7/2024: Chapter 27 Direct-Current Circuits.</p></li>
+</ul>
+</li>
+<li><p>Week 4</p>
+<ul>
+<li><p>3/12/2024: Chapter 28 Magnetic Fields.</p></li>
+<li><p>3/14/2024: Chapter 29 Sources of the Magnetic Field.</p></li>
+</ul>
+</li>
+<li><p>Week 5</p>
+<ul>
+<li><p>3/19/2024: Chapter 30 Faraday’s Law.</p></li>
+<li><p>3/21/2024: Chapter 31 Inductance.</p></li>
+</ul>
+</li>
+<li><p>Week 6</p>
+<ul>
+<li><p>3/26/2024: Chapter 32 No class.</p></li>
+<li><p>3/28/2024: Chapter 33 Chapter 32 Alternating-Current Circuits.</p></li>
+</ul>
+</li>
+<li><p>Week 7</p>
+<ul>
+<li><p>4/2/2024: No class.</p></li>
+<li><p>4/4/2024: No class.</p></li>
+</ul>
+</li>
+<li><p>Week 8</p>
+<ul>
+<li><p>4/9/2024: Chapter 33 Electromagnetic Waves.</p></li>
+<li><p>4/11/2024: Chapter 34 The Nature of Light.</p></li>
+</ul>
+</li>
+<li><p>Week 9</p>
+<ul>
+<li><p>4/16/2024: Chapter 34 The Nature of Light.</p></li>
+<li><p>4/18/2024: <strong>Midterm Exam.</strong>**</p></li>
+</ul>
+</li>
+<li><p>Week 10</p>
+<ul>
+<li><p>4/23/2024: Chapter 36 Wave Optics.</p></li>
+<li><p>4/25/2024: Chapter 36 Wave Optics</p></li>
+</ul>
+</li>
+<li><p>Week 11</p>
+<ul>
+<li><p>4/30/2024: Chapter 38 Relativity.</p></li>
+<li><p>5/2/2024: Chapter 38 Relativity.</p></li>
+</ul>
+</li>
+<li><p>Week 12</p>
+<ul>
+<li><p>5/7/2024: Chapter 38 Relativity.</p></li>
+<li><p>5/9/2024: Chapter 38 Relativity.</p></li>
+</ul>
+</li>
+<li><p>Week 13</p>
+<ul>
+<li><p>5/14/2024: Chapter 39 Introduction to Quantum Physics.</p></li>
+<li><p>5/16/2024: Chapter 39 Introduction to Quantum Physics.</p></li>
+</ul>
+</li>
+<li><p>Week 14</p>
+<ul>
+<li><p>5/21/2024: Chapter 40 Quantum Mechanics.</p></li>
+<li><p>5/23/2024: Chapter 40 Quantum Mechanics.</p></li>
+</ul>
+</li>
+<li><p>Week 15</p>
+<ul>
+<li><p>5/28/2024: Chapter 41 Atomic Physics.</p></li>
+<li><p>5/30/2024: Chapter 41 Atomic Physics.</p></li>
+</ul>
+</li>
+<li><p>Week 16</p>
+<ul>
+<li><p>6/4/2024: Chapter 41 Atomic Physics.</p></li>
+<li><p>6/6/2024: <strong>Final exam.</strong></p></li>
+</ul>
+</li>
+<li><p>Week 17</p>
+<ul>
+<li><p>6/11/2024: Review of final exam.</p></li>
+<li><p>6/13/2024:</p></li>
+</ul>
+</li>
+<li><p>Week 18</p>
+<ul>
+<li><p>6/18/2024:</p></li>
+<li><p>6/20/2024:</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./teaching"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../publications.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Publications</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="11310PHYS113402.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">11310PHYS113402</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">11220PHYS114403</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#general-physics-a-ii">General Physics A (II)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a">普通物理Ａ二</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructor">Instructor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teaching-assistant">Teaching Assistant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time">Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#room">Room</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grade">Grade</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#textbooks">Textbooks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-iv-electricity-and-magnetism">Part IV: ELECTRICITY AND MAGNETISM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-v-light-and-optics">Part V: LIGHT AND OPTICS.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-vi-modern-physics">Part VI: MODERN PHYSICS.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weekly-schedule">Weekly schedule</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Pochung Chen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

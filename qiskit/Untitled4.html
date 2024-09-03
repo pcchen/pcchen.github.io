@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Qubit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=1fd94587" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'qiskit/Untitled4';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qubit</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cv.html">Brief CV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../members.html">Members</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../teaching/11220PHYS114403.html">11220PHYS114403</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../teaching/11310PHYS113402.html">11310PHYS113402</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fqiskit/Untitled4.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/qiskit/Untitled4.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://db.nmtl.gov.tw/site3/dadwt?id=1109&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="o">.</span><span class="n">text</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;&lt;!doctype html&gt;\r\n&lt;html lang=&quot;zh-Hant&quot;&gt;\r\n&lt;head&gt;\r\n&lt;meta charset=&quot;utf-8&quot;&gt;\r\n&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width , initial-scale=1.0&quot;&gt;\r\n&lt;title&gt;台語文數位典藏資料庫&lt;/title&gt;\r\n&lt;meta name=&quot;keywords&quot; content=&quot;台語文數位典藏資料庫&quot;&gt;\r\n&lt;meta name=&quot;description&quot; content=&quot;台語文數位典藏資料庫&quot;&gt;\r\n&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/site3/index.css?v=1&quot;&gt;\r\n&lt;!-- script --&gt;\r\n&lt;script src=&quot;/js/jquery.min.js&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;/js/base.js&quot;&gt;&lt;/script&gt;\r\n&lt;/head&gt;\r\n&lt;body&gt;\r\n&lt;!-- header --&gt;\r\n&lt;!-- header --&gt;\r\n&lt;div id=&quot;header&quot; class=&quot;header&quot;&gt;\r\n    &lt;div class=&quot;wrap&quot;&gt;\r\n        &lt;a class=&quot;logo&quot; href=&quot;/&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/images/logo_zt.png&quot;&gt;&lt;/a&gt;\r\n        &lt;ul id=&quot;top-link&quot;&gt;\r\n            &lt;li&gt;&lt;a href=&quot;/site3/index&quot;&gt;台語文學發展史資料庫&lt;/a&gt;&lt;/li&gt;\r\n            &lt;li&gt;&lt;a href=&quot;/site3/home&quot;&gt;白話字數位典藏博物館&lt;/a&gt;&lt;/li&gt;\r\n            &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;/site3/dindex&quot;&gt;台語文數位典藏資料庫&lt;/a&gt;&lt;/li&gt;\r\n        &lt;/ul&gt;\r\n    &lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n\r\n&lt;!-- navigation --&gt;\r\n&lt;!-- navigation --&gt;\r\n\r\n&lt;div class=&quot;navigation eight_items&quot;&gt;\r\n    &lt;div class=&quot;wrap&quot;&gt;\r\n        &lt;ul&gt;\r\n            &lt;li class=&quot;a&quot;&gt;\r\n                &lt;a href=&quot;dindex&quot;&gt;總目錄&lt;/a&gt;\r\n            &lt;/li&gt;\r\n            &lt;li class=&quot;a&quot;&gt;\r\n                &lt;a href=&quot;query&quot;&gt;檢索查詢&lt;/a&gt;\r\n            &lt;/li&gt;\r\n            &lt;li class=&quot;a&quot;&gt;\r\n                &lt;a href=&quot;tool&quot;&gt;工具程式&lt;/a&gt;\r\n            &lt;/li&gt;\r\n            &lt;li class=&quot;b&quot;&gt;\r\n                &lt;a href=&quot;poekeng?p=leksu&quot;&gt;歷史&lt;/a&gt;\r\n            &lt;/li&gt;\r\n            &lt;li class=&quot;b&quot;&gt;\r\n                &lt;a href=&quot;poekeng?p=bunhak&quot;&gt;文學&lt;/a&gt;\r\n            &lt;/li&gt;\r\n            &lt;li class=&quot;b&quot;&gt;\r\n                &lt;a href=&quot;poekeng?p=kauhak&quot;&gt;教學&lt;/a&gt;\r\n            &lt;/li&gt;\r\n            &lt;li class=&quot;b&quot;&gt;\r\n                &lt;a href=&quot;poekeng?p=iannsiong&quot;&gt;影像&lt;/a&gt;\r\n            &lt;/li&gt;\r\n            &lt;li class=&quot;b&quot;&gt;\r\n                &lt;a href=&quot;poekeng?p=banglou&quot;&gt;網路&lt;/a&gt;\r\n            &lt;/li&gt;\r\n            &lt;li class=&quot;a&quot;&gt;\r\n                &lt;a href=&quot;plan&quot;&gt;計畫簡介&lt;/a&gt;\r\n            &lt;/li&gt;\r\n        &lt;/ul&gt;\r\n    &lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n    \r\n\r\n\r\n    &lt;script&gt;\r\n    $(function () {\r\n        $(&quot;.navigation&quot;).find(&quot;li&quot;).eq(0).addClass(&quot;active&quot;);\r\n    });\r\n    &lt;/script&gt;\r\n\r\n\r\n    &lt;div class=&quot;content wrap&quot;&gt;\r\n        &lt;div id=&quot;path&quot;&gt;\r\n            &lt;a class=&quot;home&quot; tabindex=&quot;2&quot; href=&quot;/&quot;&gt;首頁&lt;/a&gt;\r\n            &lt;span&gt;&amp;gt;&lt;/span&gt;&lt;a href=&quot;&quot;&gt;文學作品&lt;/a&gt;\r\n        &lt;/div&gt;\r\n        &lt;div class=&quot;title&quot;&gt;\r\n            &lt;span&gt;文學作品&lt;/span&gt;\r\n        &lt;/div&gt;\r\n            &lt;div class=&quot;table_th_top&quot;&gt;\r\n                &lt;div&gt;\r\n                    &lt;a href=&quot;javascript:void(0);&quot; onclick=&quot; window.history.go(-1); &quot; onkeypress=&quot; window.history.go(-1); &quot;&gt;回上一頁&lt;/a&gt;\r\n                &lt;/div&gt;\r\n                &lt;div&gt;本篇文章總共有&lt;span&gt;68&lt;/span&gt;個段落，&lt;span&gt;106&lt;/span&gt;個語句，&lt;span&gt;1487&lt;/span&gt;個語詞，&lt;span&gt;1886&lt;/span&gt;個音節&lt;/div&gt;\r\n            &lt;/div&gt;\r\n            &lt;div class=&quot;over_table&quot;&gt;\r\n                &lt;table class=&quot;article_d&quot;&gt;\r\n                    &lt;tr&gt;\r\n                        &lt;th&gt;\r\n\r\n                            &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=Bo5+chheh-phoe5+e5+te2-phiN+kou3-su7+chip8_01\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n&lt;span&gt;Bô chheh-phôe ê té-phiⁿ kò͘-sū chi̍p_01&lt;/span&gt;\r\n                        &lt;/th&gt;\r\n                        &lt;th style=&quot;font-size: 1.5em;font-weight: bold;&quot;&gt;\t無冊皮ê短篇故事集_01&lt;/th&gt;\r\n                    &lt;/tr&gt;\r\n                    &lt;tr&gt;\r\n                        &lt;td align=&quot;right&quot;&gt;Bô chù-bêng&lt;/td&gt;\r\n                        &lt;td align=&quot;right&quot;&gt;無注明&lt;/td&gt;\r\n                    &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=Soe3+Chiah+Thou3+E5+Kou3-Su7+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;Sòe Chiah Thò͘ Ê Kò͘-Sū &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;細隻兔ê故事 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++(khiam3+p1%7e2)+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  (khiàm p1~2) &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;(欠p1~2) &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++chhe7+to3+%3b+chong2-si7+i+e5+iu-bun7+e5+siaN+hou7+kui2-na7+chiah+chhek-chiau2-a2+iu2+thiaN-kiN3.+In+pe-lai5+chin7+ti3-i3+kiu5+i+ka-ki7+chhut-lat8+leng3-khui.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  chhē tò ; chóng-sī i ê iu-būn ê siaⁿ hō͘ kúi-nā chiah chhek-chiáu-á iú thiaⁿ-kìⁿ. In pe-lâi chīn tì-ì kiû i ka-kī chhut-la̍t lèng-khui. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;chhē tò ; 總是伊ê憂悶ê聲 hō͘幾若隻粟鳥仔支聽--見。In 飛來chīn致意求伊家己出力lèng--開。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Bou2+Sian-siN+theh8+chit8+e5+thou5-thai+lai5%2c+ai3+tui3+Pi2-tek+e5+teng2-bin7+lai5+hip-loh8-khi3.+Chong2-si7+Pi2-tek+tu2-tu2+ti7+hit+si5+leng3-khui+i+e5+saN+liam5+ti7+bang7-nih8.+I+chiu7+chau2+kau3+toe2+ke-si+e5+chhu3-a2%2c+thiau3-jip8+chit8+e5+ak-hoe+thang2.+Siat-su2+na7+bo5+chui2+ti7+lai7-bin7%2c+chiu7+chin7+ho2-se3+bih.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Bó͘ Sian-siⁿ the̍h chi̍t ê thô͘-thai lâi, ài tùi Pí-tek ê téng-bīn lâi hip-lo̍h-khì. Chóng-sī Pí-tek tú-tú tī hit sî lèng-khui i ê saⁿ liâm tī bāng-n̍i̍h. I chiū cháu kàu tóe ke-si ê chhù-á, thiàu-ji̍p chi̍t ê ak-hoe tháng. Siat-sú nā bô chúi tī lāi-bīn, chiū chīn hó-sè bi̍h. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;某先生提一個塗篩來，ài tùi 彼得ê頂面來翕--落去。總--是彼得tú-tú tī hit時lèng--開，伊ê衫粘tī網--n̍i̍h。伊就走到tóe ke-si ê厝仔，跳入一個沃花桶。設使若無水tī內面，就真好勢bi̍h。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Bou2+Sian-siN+siuN7+Pi2-tek+tek-khak+bih+ti7+chhu3-a2-lai7+e5+bou2+sou2-chai7%2c+kiam2-chhai2+si7+ti7+hoe-khaN+e7-toe2.+I+chiu7+soe3-ji7+chit8+e5+chit8+e5+hian+khi2-lai5%2c+khoaN3.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Bó͘ Sian-siⁿ siūⁿ Pí-tek tek-khak bi̍h tī chhù-á-lāi ê bó͘ só͘-chāi, kiám-chhái sī tī hoe-khaⁿ ē-tóe. I chiū sòe-jī chi̍t ê chi̍t ê hian khí-lâi, khòaⁿ. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;某生先想彼得的確bi̍h tī厝仔內ê某所在，kiám-chhái 是tī花khaⁿ下底。伊就細膩一個一個掀起來看。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Koh+chit8+tiap-a2+ku2+Pi2-tek+phah-kha-chhiuN3%2c+Bou2+Sian-siN+chiu7+koaN2-kin2+jip+i%2c+iah8+beh+eng7+i+e5+kha+lai5+tah8+i.+I+chiu7+thiau3+tui3+thang-a2+chhut-khi3%2c+chhia-to2+saN+khaN+hoe.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Koh chi̍t tiap-á kú Pí-tek phah-kha-chhiùⁿ, Bó͘ Sian-siⁿ chiū kóaⁿ-kín jip i, ia̍h beh ēng i ê kha lâi ta̍h i. I chiū thiàu tùi thang-á chhut-khì, chhia-tó saⁿ khaⁿ hoe. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;Koh一tiap仔久彼得扑kha-chhiùⁿ，某--先生就緊趕jip伊，亦beh用伊ê腳來踏伊。伊就跳tùi窗仔出--去，chhia倒三khaⁿ花。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chit+e5+thang-a2+si7+siuN+soe3%2c+sou2-i2+Bou2+Sian-siN+boe7+tit-ke3%2c+iah8+i+chau2+sian7+m7+ai3+jip%2c+chiu7+to3-khi3+choe3+i+e5+kang.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chit ê thang-á sī siuⁿ sòe, só͘-í Bó͘ Sian-siⁿ bōe tit-kè, ia̍h i cháu siān m̄ ài jip, chiū tò-khì chòe i ê kang. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;這個窗仔是siuⁿ細。所以某--先生bē得過，亦伊走siān m̄-ài jip，就倒去做伊ê工。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Pi2-tek+che7-teh+hioh-khun3%2c+i+haN7-haN7+chhoan2%2c+koh+kiaN+kau3+gi7-gi7-chun3%2c+long2+bo5+siuN7+tioh8+tui3+ta2-loh8+chit8+tiau5+lou7+to3-khi3.+Koh+i+si7+chin7+tam5%2c+in-ui7+i+u7+jip8-khi3+hit+e5+ak-hoe-thang2.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Pí-tek chē-teh hioh-khùn, i hāⁿ-hāⁿ chhoán, koh kiaⁿ kàu gī-gī-chùn, lóng bô siūⁿ tio̍h tùi tá-lo̍h chi̍t tiâu lō͘ tò-khì. Koh i sī chīn tâm, in-ūi i ū ji̍p-khì hit ê ak-hoe-tháng. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;彼得坐teh歇睏，伊hāⁿ hāⁿ 喘，koh驚到gī-gī chùn,攏無想著tùi tá-lo̍h一條路倒--去。Koh伊是真tâm,因為伊有入去hit個沃花桶。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Koh+chit8+tiap-a2+ku2%2c+i+chiu7+kiaN5-lai5%2c+kiaN5-khi3%2c+ban7-ban7+tong7%2c+un5-a2+kiaN5+si3-koe3+khoaN3.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Koh chi̍t tiap-á kú, i chiū kiâⁿ-lâi, kiâⁿ-khì, bān-bān tōng, ûn-á kiâⁿ sì-kòe khòaⁿ. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;Koh一tiap仔久，伊就行來，行去，慢慢tōng,勻仔行，四界看。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++I+chhe7-tioh8+chit8+e5+mng5+ti7+piah-nih8%2c+chong2-si7+so2-teh%2c+iah8+bo5+khang+thang+hou7+chit8+chiah+pui5+e5+soe3+chiah+thou3-a2+soeh+tui3+e7-toe2+jip8-khi3.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  I chhē-tio̍h chi̍t ê mn̂g tī piah-n̍i̍h, chóng-sī só-teh, ia̍h bô khang thang hō͘ chi̍t chiah pûi ê sòe chiah thò͘-á soeh tùi ē-tóe ji̍p-khì. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;伊chhē著一個門tī壁--n̍i̍h, 總--是鎖--leh，亦無空thang hō͘一隻肥ê細隻兔仔soeh tùi下底--入去。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chit8+chiah+lau7+niau2-chhu2-a2+chau2-jip8+chau2-chhut%2c+ke3+chit+e5+chioh8+hou7-teng7%2c+ka7+tau7-a2+kau3+chhiu7-na5+in+tau.+Pi2-tek+mng7+i+tui3+ta2-loh8+thang+kau3+toa7+mng5%2c+chong2-si7+i+e5+chhui3+u7+toa7+liap8+tau7-a2+ti7-teh+boe7+in3.+I+chiu7+ka7+i+io5-thau5.+Pi2-tek+soa3+hau2.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chi̍t chiah lāu niáu-chhú-á cháu-ji̍p cháu-chhut, kè chit ê chio̍h hō͘-tēng, kā tāu-á kàu chhiū-nâ in tau. Pí-tek mn̄g i tùi tá-lo̍h thang kàu tōa mn̂g, chóng-sī i ê chhùi ū tōa lia̍p tāu-á tī-teh bōe ìn. I chiū kā i iô-thâu. Pí-tek sòa háu. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;一隻老老鼠仔走入走出，過這個石戶碇，咬豆仔到樹林in 兜。彼得問伊tùi tá-lo̍h thang到大門，總--是伊ê嘴有大粒豆仔tī--leh7 bōe應。伊就kā 伊搖頭。彼得煞哮。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++I+chiu7+chhi3-khoaN3+beh+chhe7+lou7+tit8-tit8+tui3+hoe-hng5+ke3-khi3%2c+chong2-si7+i+na2+ku2+na2+loan7.+Koh+chit8+tiap-a2+ku2+i+kau3+ti7+chit8+e5+tham5-a2%2c+si7+Bou2+Sian-siN+teh+iuN2+chui2+e5+sou2-chai7.+Chit8+chiah+peh8+niau+teh+khoaN3+koa2+kim-hi5%2c+che7+kau3+tiaN7-tiaN7-tiaN7%2c+chi2-u7+u7+si5+I+e5+be2+io5+cheh%2c+hian2-beng5+i+si7+oah8+e5.+Pi2-tek+siuN7+khah+ho2+i+tioh8+chau2+m7+thang+kap+i+kong2%2c+in-ui7+i+bat+tui3+i+e5+ke3-pak+hiaN-ti7+thiaN-kiN3+niau+e5+tai7-chi3.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  I chiū chhì-khòaⁿ beh chhē lō͘ ti̍t-ti̍t tùi hoe-hn̂g kè-khì, chóng-sī i ná kú ná loān. Koh chi̍t tiap-á kú i kàu tī chi̍t ê thâm-á, sī Bó͘ Sian-siⁿ teh iúⁿ chúi ê só͘-chāi. Chi̍t chiah pe̍h niau teh khòaⁿ kóa kim-hî, chē kàu tiāⁿ-tiāⁿ-tiāⁿ, chí-ū ū sî I ê bé iô cheh, hián-bêng i sī oa̍h ê. Pí-tek siūⁿ khah hó i tio̍h cháu m̄ thang kap i kóng, in-ūi i bat tùi i ê kè-pak hiaⁿ-tī thiaⁿ-kìⁿ niau ê tāi-chì. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;伊就試看beh chhē路直直tùi花園過去，總--是那久那亂。Koh一tiap仔久，伊到tī一個潭仔，是某--先生teh舀水ê所在，一隻白貓teh看寡金魚，坐到tiāⁿ-tiāⁿ-tiāⁿ只有有時伊ê尾搖cheh，顯明伊是活--ê。彼得想較好伊著走m̄-thang kap伊講，因為伊bat tùi 伊ê過腹兄弟聽見貓ê代誌。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++I+koh+to3-tng2+ng3+hit+keng+chhu3-a2%2c+chong2-si7+hut-jian5-kan+i+thiaN-kiN3+ti5-thau5+siaN+chin7+kun7+ti7+i%2c+siak8-siak8-siak8.+Pi2-tek+koaN2-kin2+chau2+ti7+chhiu7-a2+kha.+Chong2-si7+tiap-a2-ku2+chhin-chhiuN7+bo5+tai7-chi3%2c+i+chiu7+chhut-lai5+peh-chiuN7+ti7+thou5-chhia+thau+hoaN3+ke3-khi3.+Tai7-seng+i+khoaN3-kiN3+Bou2+Sian-siN+teh+kut8+chhang.+I+e5+ka-chiah+ng3+Pi2-tek%2c+au7-lai5+khoaN3-kiN3+ti7+hit+peng5+si7+toa7+mng5.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  I koh tò-tńg ǹg hit keng chhù-á, chóng-sī hut-jiân-kan i thiaⁿ-kìⁿ tî-thâu siaⁿ chīn kūn tī i, sia̍k-sia̍k-sia̍k. Pí-tek kóaⁿ-kín cháu tī chhiū-á kha. Chóng-sī tiap-á-kú chhin-chhiūⁿ bô tāi-chì, i chiū chhut-lâi peh-chiūⁿ tī thô͘-chhia thau hòaⁿ kè-khì. Tāi-seng i khòaⁿ-kìⁿ Bó͘ Sian-siⁿ teh ku̍t chhang. I ê ka-chiah ǹg Pí-tek, āu-lâi khòaⁿ-kìⁿ tī hit pêng sī tōa mn̂g. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;伊koh倒轉向hit間厝仔，總--是忽然間伊聽見鋤頭聲chīn近tī伊，sia̍k-sia̍k-sia̍k。彼得趕緊走tī樹仔腳。總--是tiap仔久親像無代誌，伊就出來peh上tī塗車偷看--過去。代先伊看某--先生teh掘蔥。伊ê ka-chiah向彼得，後--來看見tī hit爿是大門。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Pi2-tek+khin-khin-a2+loh8+chhia%2c+chiau3+I+sou2+oe7+e5+kin2+chau2+tit8-tit8+tui3+ke2-chi2+chhiu7-a2+au7-bin7+khi3.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Pí-tek khin-khin-á lo̍h chhia, chiàu I só͘ ōe ê kín cháu ti̍t-ti̍t tùi ké-chí chhiū-á āu-bīn khì. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;彼得輕輕仔落車，照伊所會ê緊走直直tùi果子樹仔後面去。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Bou2+Sian-siN+khoaN3-kiN3+i+ti7+hoe-hng5+kak%2c+chong2-si7+Pi2-tek+bo5+iau3-kin2.+I+nng3+tui3+mng5-e7+ke3-khi3%2c+iah8+lou7-be2+peng5-an+chhut+hoe-hng5+jip8+ti7+chhiu7-na5.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Bó͘ Sian-siⁿ khòaⁿ-kìⁿ i tī hoe-hn̂g kak, chóng-sī Pí-tek bô iàu-kín. I nǹg tùi mn̂g-ē kè-khì, ia̍h lō͘-bé pêng-an chhut hoe-hn̂g ji̍p tī chhiū-nâ. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;某--先生看見伊tī花園角，總--是彼得無要緊。伊nǹg tùi門下過--去，亦路尾平安出花園入tī樹林。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Bou2+Sian-siN+tiau3+Pi2-tek+e5+soe3+nia2+saN+kap+oe5+choe3+ke2-lang5+lai5+kiaN+chiau2-a2.+Pi2-tek+long2+bo5+theng5+kha%2c+a2-si7+khoaN3+au7-bin7%2c+kau3+i+kau3+in+tau+ti7+toa7+chang5+e5+sam-chhiu7.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Bó͘ Sian-siⁿ tiàu Pí-tek ê sòe niá saⁿ kap ôe chòe ké-lâng lâi kiaⁿ chiáu-á. Pí-tek lóng bô thêng kha, á-sī khòaⁿ āu-bīn, kàu i kàu in tau tī tōa châng ê sam-chhiū. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;某--先生吊彼得ê細領衫kap鞋做假人來驚鳥仔。彼得攏無停腳，抑是看後面，到伊到in兜tī大欉ê衫樹。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++I+chin7+sian7+sou2-i2+i+phiah8+loh8-khi3+ti7+thou3-khang+e5+thou5-kha%2c+ti7+chin7+ho2+koh+nng2+e5+soa-teng2%2c+bak8-chiu+khoeh-khi3.+I+e5+bu2+bo5+eng5+teh+chu2-chiah8.+I+teh+siuN7+m7+chai+Pi2-tek+e5+saN+chaiN2-iuN7.+Si7+ti7+nng7+le2-pai3+ku2+e5+tiong-kan+Pi2-tek+u7+sit-loh8+te7+ji7+nia2+e5+saN+kap+oe5.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  I chīn siān só͘-í i phia̍h lo̍h-khì tī thò͘-khang ê thô͘-kha, tī chīn hó koh nńg ê soa-téng, ba̍k-chiu khoeh-khì. I ê bú bô êng teh chú-chia̍h. I teh siūⁿ m̄ chai Pí-tek ê saⁿ cháiⁿ-iūⁿ. Sī tī nn̄g lé-pài kú ê tiong-kan Pí-tek ū sit-lo̍h tē jī niá ê saⁿ kap ôe. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;伊chīn siān所以伊phia̍h落去tī兔空ê塗腳，tī chīn好koh軟ê沙頂，目珠瞌--去。伊ê母無閒teh煮食。伊teh想m̄知彼得ê衫怎樣。是tī兩禮拜久ê中間彼得有失落第2領ê衫kap鞋。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chin7+kho2-sioh+chit+e7-hng+Pi2-tek+bo5+sim2-mih8+peng5-an.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chīn khó-sioh chit ē-hng Pí-tek bô sím-mi̍h pêng-an. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;真可惜這e-hng彼得無甚mi̍h平安。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++I+e5+lau7-bu2+hou7+i+khi3+khun3%2c+iah8+hou7+I+chiah8+chit8+thiap+ioh8.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  I ê lāu-bú hō͘ i khì khùn, ia̍h hō͘ I chia̍h chi̍t thiap io̍h. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;伊ê老母hō͘伊去睏，亦hō͘伊食一帖藥。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chong2-si7+Put8-si%2c+Mou5-si%2c+kap+Mi5-be2+ti7+e7-hng+tng3+thang+chiah8+mi7-pau%2c+gu5-leng+kap+hou2-m7.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chóng-sī Pu̍t-si, Mô͘-si, kap Mî-bé tī ē-hng tǹg thang chia̍h mī-pau, gû-leng kap hó͘-m̄. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;總--是Pu̍t-si，Mô͘-si kap Mî-bé tī e-hng頓thang食麵包、牛奶kap hó͘-m̄。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Mng7.+Pi2-tek+m7+thiaN+lau7-bu2+e5+ka3-si7+u7+tu2-tioh8+sim2-mih8+kan-khou2+%3f+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Mn̄g. Pí-tek m̄ thiaⁿ lāu-bú ê kà-sī ū tú-tio̍h sím-mi̍h kan-khó͘ ? &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;問：彼得m̄聽老母ê教示有tú著甚mi̍h艱苦？ &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++(1)+Hiam2+hou7+lang5+liah8-khi3.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  (1) Hiám hō͘ lâng lia̍h-khì. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;(1)險hō͘人掠--去。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++(2)+Sit-loh8+i+e5+saN+kap+oe5.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  (2) Sit-lo̍h i ê saⁿ kap ôe. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;(2)失落伊ê衫kap鞋。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++(3)+Ti3-kau3+phoa3-piN7.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  (3) Tì-kàu phòa-pīⁿ. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;(3)致到破病。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++(4)+Bo5+thang+chiah8+e5-hng+e5+ho2+tng3.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  (4) Bô thang chia̍h ê-hng ê hó tǹg. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;(4)無thang食e-hng ê好頓。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Seng3-keng+kong2%2c+%e2%80%9cTioh8+thiaN+lau7-pe7+e5+ka3-si7%2c+m7+thang+khi3-sak+lau7-bu2+e5+chi2-kau3.%e2%80%9d+Chin-gian5+1+chiuN+8+chat.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Sèng-keng kóng, “Tio̍h thiaⁿ lāu-pē ê kà-sī, m̄ thang khì-sak lāu-bú ê chí-kàu.” Chin-giân 1 chiuⁿ 8 chat. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;聖經講：「著聽老父ê教示，m̄-thang 棄sak老母ê指教。」箴言1 章8 節。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chit8+Te3+Hun5+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chi̍t Tè Hûn &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;一塊雲 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Ti7+he7-thiN+chit8+cha2-khi2+chin7+joah8%2c+u7+chit8+te3+soe3+te3+hun5+tui3+hai2-nih8+khi2-lai5%2c+iah8+khin-khin-a2+phu5%2c+hoaN-hoaN+hi2-hi2%2c+keng-ke3+ti7+chheng+e5+thiN.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Tī hē-thiⁿ chi̍t chá-khí chīn joa̍h, ū chi̍t tè sòe tè hûn tùi hái-n̍i̍h khí-lâi, ia̍h khin-khin-á phû, hoaⁿ-hoaⁿ hí-hí, keng-kè tī chheng ê thiⁿ. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;Tī 夏天一早起chīn熱，有一塊細塊雲tùi海--n̍i̍h起--來，亦輕輕仔浮，歡歡喜喜，經過tī清ê天。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Li7-khui+ti7+chit8+e5+in-ui7+khong3-han7%2c+ti3-kau3+chhiah-chhiah+ta-ta+pha-hng+e5+toe7+chin7+hng7%2c+chit+te3+soe3+te3+hun5+oe7+khoaN3-kiN3+chiah+e5+kho2-lin5+e5+lang5+ti7+toe7-nih8+teh+choe3+kang+kan-khou2%2c+ti7+chiah+e5+chin7+joah8+e5+chhan5%2c+hit+si5+i+ka-ki7+phu5+ti7+cha2-khi2+si5+bi5-bi5+e5+hong%2c+chia%2c+hia%2c+bo5+khoaN3-kiN3+poaN3+hang7.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Lī-khui tī chi̍t ê in-ūi khòng-hān, tì-kàu chhiah-chhiah ta-ta pha-hng ê tōe chīn hn̄g, chit tè sòe tè hûn ōe khòaⁿ-kìⁿ chiah ê khó-lîn ê lâng tī tōe-n̍i̍h teh chòe kang kan-khó͘, tī chiah ê chīn joa̍h ê chhân, hit sî i ka-kī phû tī chá-khí sî bî-bî ê hong, chia, hia, bô khòaⁿ-kìⁿ pòaⁿ hāng. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;離開tī一個因為曠亢，致到赤赤礁礁拋荒ê地chīn遠，這塊細塊雲會看見chiah ê可憐ê人tī地--n̍i̍h the做工艱苦，tī chiah-ê chīn熱ê田，hit時伊家己浮tī早起時微微ê風，chia、hia，無看見半項。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++I+chiu7+siuN7%2c+%e2%80%9cAih8+!+goa2+m7+chai+oe7+pang-chan7+chiah+e5+e7-toe2+kho2-lin5+e5+lang5+%3b+hou7+in+choe3+kang+khah+khoai3%2c+a2-si7+hou7+iau+e5+lang5+thang+chiah8%2c+chhui3-ta+e5+lang5+thang+lim+boe7+%3f+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  I chiū siūⁿ, “A̍i̍h8 ! góa m̄ chai ōe pang-chān chiah ê ē-tóe khó-lîn ê lâng ; hō͘ in chòe kang khah khoài, á-sī hō͘ iau ê lâng thang chia̍h, chhùi-ta ê lâng thang lim bōe ? &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;伊就想：「A̍i̍h8!我m̄知會幫贊chiah-ê下底可憐ê人；hō͘ in 做工較快，抑是hō͘枵ê人thang食，嘴礁ê人thang lim--bōe?」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Tui3+chit+si5+chit8+te3+hun5+na2+ku2+na2+khah+toa7%2c+hou7+i+e5+sim+koh+khah+toa7+ng3-bang7+oe7+tam7-poh8-a2+pang-chan7+toe7-nih8+e5+lang5.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Tùi chit sî chi̍t tè hûn ná kú ná khah tōa, hō͘ i ê sim koh khah tōa ǹg-bāng ōe tām-po̍h-á pang-chān tōe-n̍i̍h ê lâng. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;Tùi這時一塊雲那久那較大，hō͘伊ê心koh較大向望會淡薄仔幫贊地--n̍i̍h ê人。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Ti7+toe7-nih8+na2+ku2+na2+joah8+%3b+chit+e5+jit8+sio+kau3+chin7+hiong5%2c+sou2-i2+lang5+tui3+hit+e5+jit8-soaN3+e5+sio+kau3+hun7-khi3+%3b+tu2-tu2+chhin-chhiuN7+beh+joah8+si2%2c+chong2-si7+in+kou-put-chiong+tioh8+choe3+kang%2c+in-ui7+in+chin7+song3-hiong.+U7+si5+in+khia7+teh+kiah8-thau5+khoaN3+hun5%2c+chhin-chhiuN7+teh+kiu5+kong2%2c+%e2%80%9cAih8+ah+!+li2+oe7+pang-chan7+gun2+boe7.%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Tī tōe-n̍i̍h ná kú ná joa̍h ; chit ê ji̍t sio kàu chīn hiông, só͘-í lâng tùi hit ê ji̍t-sòaⁿ ê sio kàu hūn-khì ; tú-tú chhin-chhiūⁿ beh joa̍h sí, chóng-sī in ko͘-put-chiong tio̍h chòe kang, in-ūi in chīn sòng-hiong. Ū sî in khiā teh kia̍h-thâu khòaⁿ hûn, chhin-chhiūⁿ teh kiû kóng, “A̍i̍h8 ah ! lí ōe pang-chān gún bōe.” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;Tī地--n̍i̍h 那久那熱；這個日燒到chīn雄，所以人tùi hit個日線ê燒到暈--去，tú tú親像beh熱死，總--是in姑不chiong著做工，因為in chīn散hiong。有時in企teh kia̍h頭看雲，親像teh求講：「A̍i̍h8 ah！你會幫贊阮-- bōe。」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Hun5+in3+kong2%2c+%e2%80%9cBeh+ouh+%3b+goa2+beh+pang-chan7+lin2.%e2%80%9d+I+chiu7+khin-khin-a2+loh8-lai5+khah+kun7+ti7+toe7-nih8.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Hûn ìn kóng, “Beh o͘h ; góa beh pang-chān lín.” I chiū khin-khin-á lo̍h-lâi khah kūn tī tōe-n̍i̍h. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;雲應講：「Beh o͘h！我beh 幫贊--lín。」伊就輕輕仔落來較近tī地--n̍i̍h。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++I+teh+loh8+e5+si5+hut-jian5-kan+ki3+tit+chit8+hang7+tai7-chi3%2c+chiu7-si7+i+ti7+soe3-soe3+e5+si5%2c+u7+thiaN-kiN3+kong2+hun5+na7+siuN+kun7+ti7+toe7-nih8+oe7+si2.+I+ki3+tit+chit+e5+e5+si5%2c+chiu7+m7+kaN2+khah+loh8-lai5%2c+tng2-khi3%2c+ti7+bi5-bi5+e5+hong%2c+siuN7+koh+siuN7.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  I teh lo̍h ê sî hut-jiân-kan kì tit chi̍t hāng tāi-chì, chiū-sī i tī sòe-sòe ê sî, ū thiaⁿ-kìⁿ kóng hûn nā siuⁿ kūn tī tōe-n̍i̍h ōe sí. I kì tit chit ê ê sî, chiū m̄ káⁿ khah lo̍h-lâi, tńg-khì, tī bî-bî ê hong, siūⁿ koh siūⁿ. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;伊teh落ê時忽然間記得一項代誌。就是伊tī細細ê時，有聽見講雲若siuⁿ近tī地--n̍i̍h會死。伊記得這個ê時，就m̄敢較落-來，轉--去，tī微微ê風，想koh想。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Kau3+lou7-be2+i+chiu7+khia7+teh+chin7+tiaN7%2c+ho2+taN2+kiau-kiah8+kong2%2c+%e2%80%9cLin2+toe7-nih8+e5+lang5+ah+!+bo5+lun7+tu2-tioh8+chaiN2-iuN7+goa2+beh+pang-chan7+lin2.%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Kàu lō͘-bé i chiū khiā teh chīn tiāⁿ, hó táⁿ kiau-kia̍h kóng, “Lín tōe-n̍i̍h ê lâng ah ! bô lūn tú-tio̍h cháiⁿ-iūⁿ góa beh pang-chān lín.” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;到路尾伊就企teh chīn tiāⁿ，好膽kiau-kia̍h講：「Lín地--n̍i̍h ê--ah！無論tú著怎樣我beh幫贊--lín。」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chit+e5+su-siuN2+hou7+i+hut-jian5-kan+hui-siong5+toa7+koh+u7+lat8.+I+m7+bat+siuN7+tioh8+oe7+chiah+toa7.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chit ê su-siúⁿ hō͘ i hut-jiân-kan hui-siông tōa koh ū la̍t. I m̄ bat siūⁿ tio̍h ōe chiah tōa. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;這個思想hō͘伊忽然間非常大koh有力。伊m̄ bat想著會chiah大。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chhin-chhiuN7+chit8+e5+u7+koan5+oe7+kang3+hok-khi3+e5+thiN-sai3+khia7+ti7+toe7-chiuN7%2c+kiah8-thau5%2c+thi2-khui+i+e5+sit8+keng-ke3+chhan5-nih8+kap+chhiu7-na5.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chhin-chhiūⁿ chi̍t ê ū koân ōe kàng hok-khì ê thiⁿ-sài khiā tī tōe-chiūⁿ, kia̍h-thâu, thí-khui i ê si̍t keng-kè chhân-n̍i̍h kap chhiū-nâ. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;親像一個有權會降福氣ê天使，企tī地上，kia̍h頭、thí開伊ê翼，經過田--n̍i̍h kap樹林。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++I+si7+chin7+toa7%2c+chin7+ui-hong%2c+sou2-i2+lang5+kap+oah8-mih8+khoaN3-kiN3+i%2c+keng3+koh+ui3.+Chiah+e5+chhiu7+kap+chhau2-a2+phak+ti7+i+e5+bin7-cheng5+%3b+chong2-si7+long2-chong2+e5+oah8-mih8+chai+i+si7+ho2+e5+i3-su3.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  I sī chīn tōa, chīn ui-hong, só͘-í lâng kap oa̍h-mi̍h khòaⁿ-kìⁿ i, kèng koh ùi. Chiah ê chhiū kap chháu-á phak tī i ê bīn-chêng ; chóng-sī lóng-chóng ê oa̍h-mi̍h chai i sī hó ê ì-sù. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;伊是chīn大，chīn威風，所以人kap活物看見-伊，敬koh畏。Chiah-ê就kap草仔仆tī伊ê面前；總--是攏總ê活物知伊是好ê意思。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Hun5+chiu7+koh+kong2%2c+%e2%80%9cSi7+ah%2c+goa2+beh+pang-chan7+lin2+%3b+lin2+tioh8+chiap-lap8+goa2+%3b+goa2+beh+eng7+goa2+e5+siN3-mia7+hou7+lin2.%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Hûn chiū koh kóng, “Sī ah, góa beh pang-chān lín ; lín tio̍h chiap-la̍p góa ; góa beh ēng góa ê sìⁿ-miā hō͘ lín.” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;雲就koh講：「是ah！我beh幫贊--lín;lín著接納--我，我beh用我ê生命hō͘ lín。」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++I+kong2+chit+ku3+oe7+e5+si5%2c+u7+chin7+kng+chio3+chhut-lai5%2c+lui5+e5+siaN+moa2+thiN+khu7-khu7+hau2%2c+hun5+moa2-moa2+e5+thiaN3+kong2+boe7+chhut+%3b+i+loh8-khi3+kau3+ti7+toe7-nih8%2c+pang3-sak+i+e5+siN3-mia7+chiah+choe3+chit8+chun7+hok-khi3+kiu3-mia7+e5+hou7.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  I kóng chit kù ōe ê sî, ū chīn kng chiò chhut-lâi, lûi ê siaⁿ móa thiⁿ khū-khū háu, hûn móa-móa ê thiàⁿ kóng bōe chhut ; i lo̍h-khì kàu tī tōe-n̍i̍h, pàng-sak i ê sìⁿ-miā chiah chòe chi̍t chūn hok-khì kiù-miā ê hō͘. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;伊講這句話ê時，有chīn光照--出來，雷ê聲滿天khū khū哮，雲滿滿ê痛講bē出；伊落去到tī地--n̍i̍h,放sak伊ê生命才做一陣福氣救命ê雨。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Hit+chun7+hou7%2c+si7+hun5+toa7+e5+sou2+choe3%2c+chiu7-si7+i+u7+si2%2c+chong2-si7+si7+choe3+i+e5+eng5-kng.+Keng-ke3+long2-chong2+e5+thou2-toe7+hou7+sou2+u7+loh8+kau3+e5+sou2-chai7+u7+chit8+e5+ho2+khoaN3+e5+kheng7+chhut-hian7+iah8+long2-chong2+thiN-nih8+e5+kng-soaN3+u7+hian2-chhut+i+e5+sek+%3b+chiu7-si7+lou7-be2+chit8+hang7+e5+thiaN3+i+sou2+hian3+e5.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Hit chūn hō͘, sī hûn tōa ê só͘ chòe, chiū-sī i ū sí, chóng-sī sī chòe i ê êng-kng. Keng-kè lóng-chóng ê thó͘-tōe hō͘ só͘ ū lo̍h kàu ê só͘-chāi ū chi̍t ê hó khòaⁿ ê khēng chhut-hiān ia̍h lóng-chóng thiⁿ-n̍i̍h ê kng-sòaⁿ ū hián-chhut i ê sek ; chiū-sī lō͘-bé chi̍t hāng ê thiàⁿ i só͘ hiàn ê. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;Hit陣雨，是雲tōa ê所做，就是伊有死，總--是是做伊ê榮光。經過攏總ê土地hō͘所有落到ê所在有一個好看ê虹出現亦攏總天--n̍i̍h ê光線有現出伊ê色；就是路尾一項ê疼伊所-- ê。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Bo5+joa7+ku2+chiu7+bo5+khi3%2c+chong2-si7+tui3+hit+tiap8+liau2-au7+chiah+e5+u7+hou7+hun5+kiu3+e5+lang5+kap+oah8-mih8+ki3-tit+i+e5+un-tian2+ti7+in+e5+sim+kau3+ku2-ku2.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Bô jōa kú chiū bô khì, chóng-sī tùi hit tia̍p liáu-āu chiah ê ū hō͘ hûn kiù ê lâng kap oa̍h-mi̍h kì-tit i ê un-tián tī in ê sim kàu kú-kú. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;無偌久就無--去，總--是tùi hit tia̍p了後chiah-ê有hō͘雲救ê人kap活物記得伊ê恩典tiīn ê心到久久。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++(1)Mng7.+Hun5+siuN7+beh+li7-ek+lang5+chiu7+chaiN2-iuN7+%3f+Chiu7+ka-ki7+na2+piN3+na2+toa7.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  (1)Mn̄g. Hûn siūⁿ beh lī-ek lâng chiū cháiⁿ-iūⁿ ? Chiū ka-kī ná pìⁿ ná tōa. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;(1)問。雲想beh利益人就怎樣？就家己那變那大。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++(2)Hun5+chaiN2-iuN7+chiah+oe7+li7-ek+lang5+%3f+Kam-goan7+khek-ki2.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  (2)Hûn cháiⁿ-iūⁿ chiah ōe lī-ek lâng ? Kam-goān khek-kí. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;(2)雲怎樣才會利益--人？甘願克己。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++(3)+Hun5+ka-ki7+tit-tioh8+sim2-mih8+%3f+Hou7+i+kiu3+e5+lang5+kap+oah8-mih8%2c+ku2-ku2+ki3-tit+i+e5+un-tian2.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  (3) Hûn ka-kī tit-tio̍h sím-mi̍h ? Hō͘ i kiù ê lâng kap oa̍h-mi̍h, kú-kú kì-tit i ê un-tián. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;(3)雲家己得著甚mi̍h？Hō͘伊救ê人kap活物。久久記得伊恩典。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Seng3-keng+kong2%2c+%e2%80%9cM7+thang+toaN-toaN+kou3+ka-ki7+e5+tai7-chi3%2c+ia7+tioh8+kou3+pat8+lang5+e5+tai7-chi3.+%e2%80%9d+Hui-lip8-pi2+2+chiuN+4+chat.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Sèng-keng kóng, “M̄ thang toaⁿ-toaⁿ kò͘ ka-kī ê tāi-chì, iā tio̍h kò͘ pa̍t lâng ê tāi-chì. ” Hui-li̍p-pí 2 chiuⁿ 4 chat. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;聖經講：「M̄ thang單單顧家己ê代誌，亦著顧別人ê代誌。」腓利比2章4節。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Koh+kong2%2c+%e2%80%9cU7+chit8+ku3+oe7+thang+sin3+thang+o-lo2%2c+chiu7-si7+Ki-tok+Ia5-sou+lim5-kau3+se3-kan+kiu3+u7+choe7+e5+lang5.%e2%80%9d+The5-mou5-thai3+chian5+1+chiuN+15+chat.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Koh kóng, “Ū chi̍t kù ōe thang sìn thang o-ló, chiū-sī Ki-tok Iâ-so͘ lîm-kàu sè-kan kiù ū chōe ê lâng.” Thê-mô͘-thài chiân 1 chiuⁿ 15 chat. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;Koh講：「有一句話thang信thang o-ló,就是基督耶穌臨到世間救有罪ê人。」提摩太前1章15節。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Soe3+Chiah+Ang5+Koe+Bu2+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Sòe Chiah Âng Koe Bú &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;細隻紅雞母 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chit8+chiah+soe3+chiah+e5+ang5+koe+bu2+kap+I+e5+koe-a2+ti7+chhan5-nih8%2c+I+chhe7+tioh8+chit8+liap8+sio2+beh8.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chi̍t chiah sòe chiah ê âng koe bú kap I ê koe-á tī chhân-n̍i̍h, I chhē tio̍h chi̍t lia̍p sió be̍h. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;一隻細隻ê紅雞母kap伊ê雞仔tī田--n̍i̍h,伊chhōe著一粒小麥。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chiu7+mng7+kong2%2c+%e2%80%9cChi7-chui7+beh+chai+chit+liap8+sio2+beh8%3f+%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chiū mn̄g kóng, “Chī-chūi beh chai chit lia̍p sió be̍h? ” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;就問講：「是誰beh栽這粒小麥？」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Go5+chiu7+kong2%2c+%e2%80%9cGoa2+m7.%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Gô chiū kóng, “Góa m̄.” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;鵝就講：「我m̄。」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Ah+iah8+kong2%2c+%e2%80%9cGoa2+m7.%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Ah ia̍h kóng, “Góa m̄.” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;鴨亦講：「我m̄。」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chit+chiah+soe3+chiah+ang5+koe+bu2+kong2%2c+%e2%80%9cGoa2+chiu7+beh%2c+%e2%80%9d+iah8+I+khi3+chai+chit+liap8+sio2+beh8.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chit chiah sòe chiah âng koe bú kóng, “Góa chiū beh, ” ia̍h I khì chai chit lia̍p sió be̍h. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;這隻細隻紅雞母講：「我就beh。」亦伊去栽這粒小麥。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chit+chang5+beh8+sek8+e5+si5%2cI+mng7+kong2%2c+%e2%80%9cChi7-chui7+beh+theh8+chiah+e5+beh8+kau3+bo7-nih8%3f%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chit châng be̍h se̍k ê sî,I mn̄g kóng, “Chī-chūi beh the̍h chiah ê be̍h kàu bō-n̍i̍h?” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;這欉麥熟ê時，伊問講：「是誰beh 提chiah ê麥到磨--n̍i̍h?」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Go5+chiu7+kong2%2c+%e2%80%9cGoa2+m7.%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Gô chiū kóng, “Góa m̄.” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;鵝就講：「我m̄。」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Ah+iah8+kong2%2c+%e2%80%9cGoa2+m7.%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Ah ia̍h kóng, “Góa m̄.” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;鴨亦講：「我m̄。」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chit+chiah+ang5+koe+bu2+kong2%2c+%e2%80%9cGoa2+chiu7+beh%2c%e2%80%9d+iah8+I+theh8+chiah+e5+beh8+khi3+ti7+bo7-nih8.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chit chiah âng koe bú kóng, “Góa chiū beh,” ia̍h I the̍h chiah ê be̍h khì tī bō-n̍i̍h. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;這隻細隻紅雞母講：「我就beh。」亦伊提chiah ê麥，去tī磨--n̍i̍h。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Au7-lai5+theh8+mi7-hun2+to3-lai5+I+mng7+kong2%2c+%e2%80%9cChi7-chui7+beh+eng7+chit+e5+mi7-hun2%2c+choe3+mi7-pau%3f+%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Āu-lâi the̍h mī-hún tò-lâi I mn̄g kóng, “Chī-chūi beh ēng chit ê mī-hún, chòe mī-pau? ” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;後來提麵粉倒來伊問講：「是誰beh 用這個麵粉，做麵包？」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Go5+chiu7+kong2%2c+%e2%80%9cGoa2+m7.%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Gô chiū kóng, “Góa m̄.” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;鵝就講：「我m̄。」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Ah+iah8+kong2%2c+%e2%80%9cGoa2+m7.%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Ah ia̍h kóng, “Góa m̄.” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;鴨亦講：「我m̄。」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chit+chiah+soe3+chiah+e5+ang5+koe+bu2+kong2%2c+%e2%80%9cGoa2+chiu7+beh%2c+%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chit chiah sòe chiah ê âng koe bú kóng, “Góa chiū beh, ” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;這隻細隻ê紅雞母講：「我就beh。」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Mi7-pau+sio+ho2+e5+si5%2c+I+mng7+kong2%2c+%e2%80%9cChi7-chui7+beh+chiah8+chit+e5+mi7-pau%3f+%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Mī-pau sio hó ê sî, I mn̄g kóng, “Chī-chūi beh chia̍h chit ê mī-pau? ” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;麵包燒好ê時，伊問講：「是誰beh食這個包？」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Go5+chiu7+kong2%2c+%e2%80%9cGoa2+beh.%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Gô chiū kóng, “Góa beh.” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;鵝就講：「我beh。」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Ah+iah8+kong2%2c+%e2%80%9cGoa2+beh.%e2%80%9d+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Ah ia̍h kóng, “Góa beh.” &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;鴨亦講：「我beh。」 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Chit+chiah+soe3+chiah+ang5+koe-bu2+kong2+%e2%80%9cBo5%2c+lin2+bo5+thang+chiah8.+Goa2+beh+ka-ki7+chiah8%2c+Tok8%2c+tok8+!%e2%80%9d+I+chiu7+kio3+i+e5+koe-a2+lai5+pang-chan7+i+chiah8.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Chit chiah sòe chiah âng koe-bú kóng “Bô, lín bô thang chia̍h. Góa beh ka-kī chia̍h, To̍k, to̍k !” I chiū kiò i ê koe-á lâi pang-chān i chia̍h. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;這隻細隻紅雞母講：「無，lín無thang食。我beh家己食，To̍k,to̍k!」伊就叫伊ê雞仔來幫贊伊食。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++(1)Mng7.+Ang5+Koe-bu2+chaiN2-iuN7+thang+tit-tioh8+mi7-pau+%3f+U7+cheng3+beh8%2c+bo7+choe3+mi7-hun2%2c+ia7+sio+mi7-pau%2c+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  (1)Mn̄g. Âng Koe-bú cháiⁿ-iūⁿ thang tit-tio̍h mī-pau ? Ū chèng be̍h, bō chòe mī-hún, iā sio mī-pau, &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;(1)問。紅雞母怎樣thang 得著麵包？有種麥，磨做麵粉，也燒麵包。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++(2)Go5+kap+ah+chaiN2-iuN7+bo5+thang+chiah8+mi7-pau+%3f+In-ui7+pin5-toaN7+m7+ai3+choe3+kang.+\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  (2)Gô kap ah cháiⁿ-iūⁿ bô thang chia̍h mī-pau ? In-ūi pîn-tōaⁿ m̄ ài chòe kang. &lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;(2)鵝kap鴨怎樣無thang食麵包？因為貧憚m̄ ài做工。 &lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n                                &lt;tr&gt;\r\n                                    &lt;td&gt;\r\n                                        &lt;img class=&quot;sound&quot; src=&quot;/images/site/sound.gif&quot; onclick=&quot;window.open(\&#39;https://服務.意傳.台灣/文本直接合成?查詢腔口=台語&amp;amp;查詢語句=++Seng3-keng+kong2%2c+%e2%80%9cNa7+u7+lang5+m7+kheng2+choe3+kang+chiu7+m7+thang+chiah8+png7.%e2%80%9d\&#39;,\&#39;c\&#39;,\&#39;location=no,width=350,height=30\&#39;)&quot;&gt;\r\n                                        &lt;span&gt;  Sèng-keng kóng, “Nā ū lâng m̄ khéng chòe kang chiū m̄ thang chia̍h pn̄g.”&lt;/span&gt;\r\n                                    &lt;/td&gt;\r\n                                    &lt;td&gt;聖經講：「若有人m̄肯做工就m̄ thang食飯。」&lt;/td&gt;\r\n                                &lt;/tr&gt;\r\n\r\n                &lt;/table&gt;\r\n            &lt;/div&gt;\r\n            &lt;div class=&quot;table_th&quot;&gt;\r\n                &lt;a href=&quot;javascript:void(0);&quot; onclick=&quot; window.history.go(-1); &quot; onkeypress=&quot; window.history.go(-1); &quot;&gt;回上一頁&lt;/a&gt;\r\n                &lt;span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;終戰後，&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;font color=&quot;#3380b2&quot;&gt;196X&lt;/font&gt;年,&amp;nbsp;&amp;nbsp;&amp;nbsp;小說&lt;/span&gt;\r\n            &lt;/div&gt;\r\n\r\n    &lt;/div&gt;\r\n\r\n\r\n&lt;!-- footer --&gt;\r\n\r\n&lt;div id=&quot;footer&quot;&gt;\r\n    &lt;div id=&quot;gotop&quot;&gt;top&lt;/div&gt;\r\n    &lt;div class=&quot;wrap&quot;&gt;\r\n        &lt;div class=&quot;info_logo&quot;&gt;\r\n            &lt;a href=&quot;/&quot;&gt;&lt;img src=&quot;/images/foot_img.png&quot;&gt;&lt;/a&gt;\r\n        &lt;/div&gt;\r\n        &lt;div class=&quot;link_out&quot;&gt;\r\n            &lt;span&gt;&lt;a href=&quot;http://depart.moe.edu.tw/ed2400/cp.aspx?n=BB47AA61331DDAC8&amp;s=5900082022C17E11&quot; target=&quot;_blank&quot;&gt;教育部輸入法&lt;/a&gt;&lt;/span&gt;\r\n            &lt;span&gt;&lt;a href=&quot;http://taigi.fhl.net/TaigiIME/&quot; target=&quot;_blank&quot;&gt;信望愛輸入法&lt;/a&gt;&lt;/span&gt;\r\n        &lt;/div&gt;\r\n        &lt;div class=&quot;fot_rig third&quot;&gt;\r\n            &lt;div class=&quot;f_d&quot;&gt;\r\n                &lt;span&gt;地址：台南市中西區中正路1號&lt;/span&gt;\r\n                &lt;span&gt;電話：(06)221-7201&lt;/span&gt;\r\n                &lt;span&gt;傳真：(06)222-6115&lt;/span&gt;\r\n            &lt;/div&gt;\r\n            &lt;div class=&quot;f_d&quot;&gt;\r\n                &lt;span&gt;國立台灣文學館&amp;nbsp;&amp;nbsp;&amp;nbsp;著作權所有&lt;/span&gt;\r\n                &lt;span&gt;\r\n                    &lt;a href=&quot;https://www.nmtl.gov.tw/onlineobject_164_34.html&quot; target=&quot;_blank&quot;&gt;聯絡我們&lt;/a&gt;\r\n                    &lt;a href=&quot;https://www.nmtl.gov.tw/content_173.html&quot; target=&quot;_blank&quot; style=&quot;margin-left: 15px;&quot;&gt;著作權聲明&lt;/a&gt;\r\n                &lt;/span&gt;\r\n                &lt;span&gt;瀏覽人次：&lt;span&gt;462828&lt;/span&gt;&lt;/span&gt;\r\n            &lt;/div&gt;\r\n        &lt;/div&gt;\r\n    &lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;!-- mobile --&gt;\r\n&lt;div id=&quot;mobile&quot;&gt; &lt;/div&gt;\r\n\r\n&lt;/body&gt;\r\n&lt;/html&gt;\r\n\r\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./qiskit"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Pochung Chen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

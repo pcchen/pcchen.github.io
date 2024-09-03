@@ -1,0 +1,924 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sampler &#8212; Qubit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=1fd94587" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'qiskit/Untitled';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Qubit</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cv.html">Brief CV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../members.html">Members</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../teaching/11220PHYS114403.html">11220PHYS114403</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../teaching/11310PHYS113402.html">11310PHYS113402</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fqiskit/Untitled.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/qiskit/Untitled.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sampler</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Sampler</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estimator">Estimator</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aer">AER</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><a class="github reference external" href="https://github.com/Qiskit/qiskit">Qiskit/qiskit</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qiskit</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">qiskit</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;qiskit&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. A quantum circuit for preparing the quantum state |000&gt; + i |111&gt;</span>
+<span class="n">qc_example</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">qc_example</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>          <span class="c1"># generate superpostion</span>
+<span class="n">qc_example</span><span class="o">.</span><span class="n">p</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># add quantum phase</span>
+<span class="n">qc_example</span><span class="o">.</span><span class="n">cx</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>       <span class="c1"># 0th-qubit-Controlled-NOT gate on 1st qubit</span>
+<span class="n">qc_example</span><span class="o">.</span><span class="n">cx</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>       <span class="c1"># 0th-qubit-Controlled-NOT gate on 2nd qubit</span>
+<span class="n">qc_example</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style="word-wrap: normal;white-space: pre;background: #fff0;line-height: 1.1;font-family: &quot;Courier New&quot;,Courier,monospace">     ┌───┐┌────────┐          
+q_0: ┤ H ├┤ P(π/2) ├──■────■──
+     └───┘└────────┘┌─┴─┐  │  
+q_1: ───────────────┤ X ├──┼──
+                    └───┘┌─┴─┐
+q_2: ────────────────────┤ X ├
+                         └───┘</pre></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. define the observable to be measured </span>
+<span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">SparsePauliOp</span>
+<span class="n">operator</span> <span class="o">=</span> <span class="n">SparsePauliOp</span><span class="o">.</span><span class="n">from_list</span><span class="p">([(</span><span class="s2">&quot;XXY&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;XYX&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;YXX&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;YYY&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)])</span>
+
+<span class="c1"># 3. Execute using the Estimator primitive</span>
+<span class="kn">from</span> <span class="nn">qiskit.primitives</span> <span class="kn">import</span> <span class="n">Estimator</span>
+<span class="n">estimator</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">primitives</span><span class="o">.</span><span class="n">BackendEstimator</span><span class="p">(</span><span class="n">FakeManilaV2</span><span class="p">())</span>
+<span class="n">estimator</span> <span class="o">=</span> <span class="n">Estimator</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">job</span> <span class="o">=</span> <span class="n">estimator</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">qc_example</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+    <span class="c1"># print(s, f&quot; &gt; Expectation values: {result.values}&quot;)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot; &gt; Expectation values: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1  &gt; Expectation values: EstimatorResult(values=array([4.00000001]), metadata=[{&#39;variance&#39;: 3.552713678800501e-15, &#39;shots&#39;: 1}])
+11  &gt; Expectation values: EstimatorResult(values=array([3.99999999]), metadata=[{&#39;variance&#39;: 3.552713678800501e-15, &#39;shots&#39;: 11}])
+21  &gt; Expectation values: EstimatorResult(values=array([4.00000001]), metadata=[{&#39;variance&#39;: 3.552713678800501e-15, &#39;shots&#39;: 21}])
+31  &gt; Expectation values: EstimatorResult(values=array([4.00000002]), metadata=[{&#39;variance&#39;: 3.552713678800501e-15, &#39;shots&#39;: 31}])
+41  &gt; Expectation values: EstimatorResult(values=array([3.99999998]), metadata=[{&#39;variance&#39;: 3.552713678800501e-15, &#39;shots&#39;: 41}])
+51  &gt; Expectation values: EstimatorResult(values=array([3.99999999]), metadata=[{&#39;variance&#39;: 3.552713678800501e-15, &#39;shots&#39;: 51}])
+61  &gt; Expectation values: EstimatorResult(values=array([4.]), metadata=[{&#39;variance&#39;: 3.552713678800501e-15, &#39;shots&#39;: 61}])
+71  &gt; Expectation values: EstimatorResult(values=array([4.]), metadata=[{&#39;variance&#39;: 3.552713678800501e-15, &#39;shots&#39;: 71}])
+81  &gt; Expectation values: EstimatorResult(values=array([4.00000001]), metadata=[{&#39;variance&#39;: 3.552713678800501e-15, &#39;shots&#39;: 81}])
+91  &gt; Expectation values: EstimatorResult(values=array([4.]), metadata=[{&#39;variance&#39;: 3.552713678800501e-15, &#39;shots&#39;: 91}])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. Execute using the Sampler primitive</span>
+<span class="kn">from</span> <span class="nn">qiskit.primitives.sampler</span> <span class="kn">import</span> <span class="n">Sampler</span>
+
+<span class="c1"># , BackendSampler</span>
+<span class="n">sampler</span> <span class="o">=</span> <span class="n">Sampler</span><span class="p">()</span>
+
+<span class="n">job</span> <span class="o">=</span> <span class="n">sampler</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">qc_measured</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; &gt; Quasi probability distribution: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">quasi_dists</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> &gt; Quasi probability distribution: [{0: 0.493, 7: 0.507}]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="sampler">
+<h1>Sampler<a class="headerlink" href="#sampler" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Add the classical output in the form of measurement of all qubits</span>
+<span class="n">qc_measured</span> <span class="o">=</span> <span class="n">qc_example</span><span class="o">.</span><span class="n">measure_all</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">qc_measured</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style="word-wrap: normal;white-space: pre;background: #fff0;line-height: 1.1;font-family: &quot;Courier New&quot;,Courier,monospace">        ┌───┐┌────────┐           ░ ┌─┐      
+   q_0: ┤ H ├┤ P(π/2) ├──■────■───░─┤M├──────
+        └───┘└────────┘┌─┴─┐  │   ░ └╥┘┌─┐   
+   q_1: ───────────────┤ X ├──┼───░──╫─┤M├───
+                       └───┘┌─┴─┐ ░  ║ └╥┘┌─┐
+   q_2: ────────────────────┤ X ├─░──╫──╫─┤M├
+                            └───┘ ░  ║  ║ └╥┘
+meas: 3/═════════════════════════════╩══╩══╩═
+                                     0  1  2 </pre></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit.visualization</span> <span class="kn">import</span> <span class="n">plot_histogram</span>
+<span class="n">statistics</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">quasi_dists</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">binary_probabilities</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">plot_histogram</span><span class="p">(</span><span class="n">statistics</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/50cd3a971615e45d4f3c25db0ad2b11367248543a81ac065cc0002d459a412d2.png" src="../_images/50cd3a971615e45d4f3c25db0ad2b11367248543a81ac065cc0002d459a412d2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qiskit.primitives</span>
+<span class="kn">from</span> <span class="nn">qiskit.providers.fake_provider</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">sampler</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">primitives</span><span class="o">.</span><span class="n">BackendSampler</span><span class="p">(</span><span class="n">FakeManilaV2</span><span class="p">())</span>
+<span class="c1"># sampler = qiskit.primitives.sampler.Sampler()</span>
+
+<span class="n">job</span> <span class="o">=</span> <span class="n">sampler</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">qc_measured</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; &gt; Quasi probability distribution: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">quasi_dists</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">statistics</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">quasi_dists</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">binary_probabilities</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">plot_histogram</span><span class="p">(</span><span class="n">statistics</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> &gt; Quasi probability distribution: [{1: 0.003, 4: 0.011, 6: 0.014, 5: 0.022, 2: 0.018, 0: 0.5, 3: 0.017, 7: 0.415}]
+</pre></div>
+</div>
+<img alt="../_images/b7bbe3bd3e2b6db7e143814bd35ccf88f33eeb3943a17f044c31317d0efa6b7d.png" src="../_images/b7bbe3bd3e2b6db7e143814bd35ccf88f33eeb3943a17f044c31317d0efa6b7d.png" />
+</div>
+</div>
+</section>
+<section id="estimator">
+<h1>Estimator<a class="headerlink" href="#estimator" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. define the observable to be measured </span>
+<span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">SparsePauliOp</span>
+<span class="n">operator</span> <span class="o">=</span> <span class="n">SparsePauliOp</span><span class="o">.</span><span class="n">from_list</span><span class="p">([(</span><span class="s2">&quot;XXY&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;XYX&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;YXX&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;YYY&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)])</span>
+
+<span class="c1"># 3. Execute using the Estimator primitive</span>
+<span class="kn">from</span> <span class="nn">qiskit.primitives</span> <span class="kn">import</span> <span class="n">Estimator</span>
+<span class="n">estimator</span> <span class="o">=</span> <span class="n">Estimator</span><span class="p">()</span>
+
+<span class="n">job</span> <span class="o">=</span> <span class="n">estimator</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">qc_example</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; &gt; Expectation values: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">result</span>
+
+<span class="n">job</span> <span class="o">=</span> <span class="n">estimator</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">qc_example</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; &gt; Expectation values: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">result</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> &gt; Expectation values: [4.00000004]
+ &gt; Expectation values: [4.]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>EstimatorResult(values=array([4.]), metadata=[{&#39;variance&#39;: 3.552713678800501e-15, &#39;shots&#39;: 1000}])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>EstimatorResult(values=array([4.]), metadata=[{&#39;variance&#39;: 3.552713678800501e-15, &#39;shots&#39;: 1000}])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Operator</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Quantum Circuit acting on a quantum register of three qubits</span>
+<span class="n">circ</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># Add a H gate on qubit 0, putting this qubit in superposition.</span>
+<span class="n">circ</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># Add a CX (CNOT) gate on control qubit 0 and target qubit 1, putting</span>
+<span class="c1"># the qubits in a Bell state.</span>
+<span class="n">circ</span><span class="o">.</span><span class="n">cx</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Add a CX (CNOT) gate on control qubit 0 and target qubit 2, putting</span>
+<span class="c1"># the qubits in a GHZ state.</span>
+<span class="n">circ</span><span class="o">.</span><span class="n">cx</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">circ</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="n">U</span> <span class="o">=</span> <span class="n">Operator</span><span class="p">(</span><span class="n">circ</span><span class="p">)</span>
+<span class="c1"># Show the results</span>
+<span class="n">U</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.70710678+0.j,  0.70710678+0.j,  0.        +0.j,
+         0.        +0.j,  0.        +0.j,  0.        +0.j,
+         0.        +0.j,  0.        +0.j],
+       [ 0.        +0.j,  0.        +0.j,  0.        +0.j,
+         0.        +0.j,  0.        +0.j,  0.        +0.j,
+         0.70710678+0.j, -0.70710678+0.j],
+       [ 0.        +0.j,  0.        +0.j,  0.70710678+0.j,
+         0.70710678+0.j,  0.        +0.j,  0.        +0.j,
+         0.        +0.j,  0.        +0.j],
+       [ 0.        +0.j,  0.        +0.j,  0.        +0.j,
+         0.        +0.j,  0.70710678+0.j, -0.70710678+0.j,
+         0.        +0.j,  0.        +0.j],
+       [ 0.        +0.j,  0.        +0.j,  0.        +0.j,
+         0.        +0.j,  0.70710678+0.j,  0.70710678+0.j,
+         0.        +0.j,  0.        +0.j],
+       [ 0.        +0.j,  0.        +0.j,  0.70710678+0.j,
+        -0.70710678+0.j,  0.        +0.j,  0.        +0.j,
+         0.        +0.j,  0.        +0.j],
+       [ 0.        +0.j,  0.        +0.j,  0.        +0.j,
+         0.        +0.j,  0.        +0.j,  0.        +0.j,
+         0.70710678+0.j,  0.70710678+0.j],
+       [ 0.70710678+0.j, -0.70710678+0.j,  0.        +0.j,
+         0.        +0.j,  0.        +0.j,  0.        +0.j,
+         0.        +0.j,  0.        +0.j]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Quantum Circuit</span>
+<span class="n">meas</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">meas</span><span class="o">.</span><span class="n">barrier</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="c1"># map the quantum measurement to the classical bits</span>
+<span class="n">meas</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="c1"># The Qiskit circuit object supports composition.</span>
+<span class="c1"># Here the meas has to be first and front=True (putting it before)</span>
+<span class="c1"># as compose must put a smaller circuit into a larger one.</span>
+<span class="n">qc</span> <span class="o">=</span> <span class="n">meas</span><span class="o">.</span><span class="n">compose</span><span class="p">(</span><span class="n">circ</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">front</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#drawing the circuit</span>
+<span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="c1"># Adding the transpiler to reduce the circuit to QASM instructions</span>
+<span class="c1"># supported by the backend</span>
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">transpile</span>
+
+<span class="c1"># Use AerSimulator</span>
+<span class="kn">from</span> <span class="nn">qiskit_aer</span> <span class="kn">import</span> <span class="n">AerSimulator</span>
+
+<span class="n">backend</span> <span class="o">=</span> <span class="n">AerSimulator</span><span class="p">()</span>
+
+<span class="c1"># First we have to transpile the quantum circuit</span>
+<span class="c1"># to the low-level QASM instructions used by the</span>
+<span class="c1"># backend</span>
+<span class="n">qc_compiled</span> <span class="o">=</span> <span class="n">transpile</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span> <span class="n">backend</span><span class="p">)</span>
+
+<span class="c1"># Execute the circuit on the qasm simulator.</span>
+<span class="c1"># We&#39;ve set the number of repeats of the circuit</span>
+<span class="c1"># to be 1024, which is the default.</span>
+<span class="n">job_sim</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">qc_compiled</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span>
+
+<span class="c1"># Grab the results from the job.</span>
+<span class="n">result_sim</span> <span class="o">=</span> <span class="n">job_sim</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from qiskit import BasicAer</span>
+<span class="c1"># backend = BasicAer.get_backend(&#39;qasm_simulator&#39;)</span>
+<span class="c1"># Get a fake backend from the fake provider</span>
+<span class="n">backend</span> <span class="o">=</span> <span class="n">FakeManilaV2</span><span class="p">()</span>
+<span class="c1"># backend= FakeAuckland()</span>
+<span class="c1"># backend = AerSimulator()</span>
+
+
+<span class="n">job</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
+<span class="n">plot_histogram</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/509f88c9c016b993ccad66ec5ad67b25e10f29a1e14a21eaee1a91e3e8abbf9c.png" src="../_images/509f88c9c016b993ccad66ec5ad67b25e10f29a1e14a21eaee1a91e3e8abbf9c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">transpile</span>
+ 
+<span class="c1"># Transpile the ideal circuit to a circuit that can be directly executed by the backend</span>
+<span class="n">transpiled_circuit</span> <span class="o">=</span> <span class="n">transpile</span><span class="p">(</span><span class="n">circuit</span><span class="p">,</span> <span class="n">backend</span><span class="p">)</span>
+<span class="n">transpiled_circuit</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style="word-wrap: normal;white-space: pre;background: #fff0;line-height: 1.1;font-family: &quot;Courier New&quot;,Courier,monospace">global phase: π/4
+                                                                   »
+ancilla_0 -> 0 ────────────────────────────────────────────────────»
+                                                                   »
+ancilla_1 -> 1 ────────────────────────────────────────────────────»
+                                           ┌───┐┌─────────────────┐»
+      q_1 -> 2 ────────────────────────────┤ X ├┤ Delay(4800[dt]) ├»
+               ┌─────────┐┌────┐┌─────────┐└─┬─┘└─────────────────┘»
+      q_0 -> 3 ┤ Rz(π/2) ├┤ √X ├┤ Rz(π/2) ├──■───────────■─────────»
+               └─────────┘└────┘└─────────┘            ┌─┴─┐       »
+      q_2 -> 4 ────────────────────────────────────────┤ X ├───────»
+                                                       └───┘       »
+       meas: 3/════════════════════════════════════════════════════»
+                                                                   »
+«                                              
+«ancilla_0 -> 0 ───────────────────────────────
+«                                              
+«ancilla_1 -> 1 ───────────────────────────────
+«                                   ░    ┌─┐   
+«      q_1 -> 2 ────────────────────░────┤M├───
+«               ┌─────────────────┐ ░ ┌─┐└╥┘   
+«      q_0 -> 3 ┤ Delay(4800[dt]) ├─░─┤M├─╫────
+«               ├─────────────────┤ ░ └╥┘ ║ ┌─┐
+«      q_2 -> 4 ┤ Delay(4800[dt]) ├─░──╫──╫─┤M├
+«               └─────────────────┘ ░  ║  ║ └╥┘
+«       meas: 3/═══════════════════════╩══╩══╩═
+«                                      0  1  2 </pre></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> 
+<span class="c1"># Run the transpiled circuit using the simulated fake backend</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">transpiled_circuit</span><span class="p">)</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
+<span class="n">plot_histogram</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b913c3c600a799b743dfd20206b340221a8f36369d0dfc419f97bfc6e33c1c51.png" src="../_images/b913c3c600a799b743dfd20206b340221a8f36369d0dfc419f97bfc6e33c1c51.png" />
+</div>
+</div>
+</section>
+<section id="aer">
+<h1>AER<a class="headerlink" href="#aer" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qiskit</span>
+<span class="kn">from</span> <span class="nn">qiskit_aer</span> <span class="kn">import</span> <span class="n">AerSimulator</span>
+<span class="kn">from</span> <span class="nn">qiskit.providers.fake_provider</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Generate 3-qubit GHZ state</span>
+<span class="n">circ</span> <span class="o">=</span> <span class="n">qiskit</span><span class="o">.</span><span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">circ</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">circ</span><span class="o">.</span><span class="n">cx</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">circ</span><span class="o">.</span><span class="n">cx</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">circ</span><span class="o">.</span><span class="n">measure_all</span><span class="p">()</span>
+
+<span class="c1"># Construct an ideal simulator</span>
+<span class="n">aersim</span> <span class="o">=</span> <span class="n">AerSimulator</span><span class="p">()</span>
+
+<span class="c1"># Perform an ideal simulation</span>
+<span class="n">result_ideal</span> <span class="o">=</span> <span class="n">aersim</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">circ</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+<span class="n">counts_ideal</span> <span class="o">=</span> <span class="n">result_ideal</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Counts(ideal):&#39;</span><span class="p">,</span> <span class="n">counts_ideal</span><span class="p">)</span>
+<span class="c1"># Counts(ideal): {&#39;000&#39;: 493, &#39;111&#39;: 531}</span>
+
+<span class="c1"># Construct a noisy simulator backend from an IBMQ backend</span>
+<span class="c1"># This simulator backend will be automatically configured</span>
+<span class="c1"># using the device configuration and noise model</span>
+<span class="n">backend</span> <span class="o">=</span> <span class="n">FakeCairo</span><span class="p">()</span>
+<span class="c1"># aersim_backend = AerSimulator.from_backend(backend)</span>
+<span class="n">aersim_backend</span> <span class="o">=</span> <span class="n">FakeManilaV2</span><span class="p">()</span>
+
+<span class="c1"># Perform noisy simulation</span>
+<span class="n">result_noise</span> <span class="o">=</span> <span class="n">aersim_backend</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">circ</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+<span class="n">counts_noise</span> <span class="o">=</span> <span class="n">result_noise</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Counts(noise):&#39;</span><span class="p">,</span> <span class="n">counts_noise</span><span class="p">)</span>
+<span class="c1"># Counts(noise): {&#39;101&#39;: 16, &#39;110&#39;: 48, &#39;100&#39;: 7, &#39;001&#39;: 31, &#39;010&#39;: 7, &#39;000&#39;: 464, &#39;011&#39;: 15, &#39;111&#39;: 436}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Counts(ideal): {&#39;000&#39;: 485, &#39;111&#39;: 539}
+Counts(noise): {&#39;001&#39;: 32, &#39;110&#39;: 109, &#39;100&#39;: 20, &#39;011&#39;: 16, &#39;111&#39;: 370, &#39;010&#39;: 11, &#39;000&#39;: 449, &#39;101&#39;: 17}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./qiskit"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Sampler</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estimator">Estimator</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aer">AER</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Pochung Chen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,4 +1,6 @@
 # Glossary of physics
+* domain 領域
+* codomain 對應域
 * mechanics 力學
   * kinematics 運動學
   * dynamics 動力學

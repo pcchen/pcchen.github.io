@@ -48,6 +48,8 @@
   * gravitational mass 重力質量
 * weight 重量
 * force 重力
+  * conservative force
+  * nonconservative force
   * contact force
   * field force
   * fundamental forces
@@ -56,6 +58,9 @@
   * strong force
   * weak force
 * equilibrium 平衡狀態
+  * stable equilibrium
+  * unstable equilibrium
+  * neutral equilibrium
   * particle in equilibrium
 * force diagram 力圖
 * free-body diagram 自由體圖
@@ -63,3 +68,17 @@
   * forces of friction
   * static friction
   * kinetic friction
+
+* system
+  * isolated system
+  * nonisolated system
+* work
+  * work-kinetic energy theorem
+* energy
+  * kinetic energy
+  * potential energy
+  * mechanical energy
+* power
+* momentum
+  * linear momentum
+  

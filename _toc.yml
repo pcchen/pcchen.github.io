@@ -20,7 +20,7 @@ parts:
     - file: publications
     - file: Cytnx
   # - caption: Teaching
-    - file: teaching/11310PHYS113402
+    # - file: teaching/11310PHYS113402
     - file: teaching/11320PHYS114402
     - file: teaching/11320PHYS597002
     - file: teaching/glossary

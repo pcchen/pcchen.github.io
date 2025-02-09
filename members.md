@@ -8,15 +8,25 @@
 
 
 ## Current Members
-* 陳威伸
-  * 2022/9-Now, Master Student.
+* 莊信鈞
+  * 2024/9-Now, Undergraduate Student.
+* 石泰銘
+  * 2024/9-Now, Master Student.
 * 林彥彤
   * 2020/9-Now, Ph.D. Student.
 * Sing-Hong Chan 陳星宏
   * 2020/9-2023/7, Master.
   * 2023/9-Now, Ph.D. Student.
+* Dr. Mrinal Kanti Giri 莫納爾
+  * 2023
+* Dr. Valgushev Semeon
+  * 2024
 
 ## Former Members
+* Dr. Debasmita Maiti
+  * 2020-2022
+* 陳威伸
+  * 2022/9-2024, Master Student.
 * Mr. 劉少輔
   * 2019/9-2022/7, Master Student.
 * Dr. Yao-Tai Kang [康耀太博士](https://eee.zqu.edu.cn/info/1007/2264.htm)

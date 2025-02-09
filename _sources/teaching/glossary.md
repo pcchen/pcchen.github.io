@@ -1,4 +1,6 @@
 # Glossary of physics
+* domain 領域
+* codomain 對應域
 * mechanics 力學
   * kinematics 運動學
   * dynamics 動力學
@@ -38,11 +40,45 @@
   * period 週期
   * periodic motion 週期性運動
 * Galilean transformation 伽利略轉換
-* Newton's first law of motion
-* Newton's second law of motion
-* Newton's third law of motion
+* Newton's first law of motion (law of inertial) 牛頓第一運動定律
+* Newton's second law of motion 牛頓第二運動定律
+* Newton's third law of motion 牛頓第三運動定律
 * mass 質量
+  * inertial mass 慣性質量
+  * gravitational mass 重力質量
 * weight 重量
 * force 重力
+  * conservative force
+  * nonconservative force
+  * contact force
+  * field force
+  * fundamental forces
   * gravitational force 重力
+  * electromagnetic force
+  * strong force
+  * weak force
 * equilibrium 平衡狀態
+  * stable equilibrium
+  * unstable equilibrium
+  * neutral equilibrium
+  * particle in equilibrium
+* force diagram 力圖
+* free-body diagram 自由體圖
+* friction
+  * forces of friction
+  * static friction
+  * kinetic friction
+
+* system
+  * isolated system
+  * nonisolated system
+* work
+  * work-kinetic energy theorem
+* energy
+  * kinetic energy
+  * potential energy
+  * mechanical energy
+* power
+* momentum
+  * linear momentum
+  

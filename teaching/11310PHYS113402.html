@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,10 +39,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=1fd94587" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -61,10 +64,11 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'teaching/11310PHYS113402';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Glossary of physics" href="glossary.html" />
+    <link rel="next" title="11320PHYS114402" href="11320PHYS114402.html" />
     <link rel="prev" title="Cytnx" href="../Cytnx.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -80,19 +84,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -100,7 +93,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -108,8 +100,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -125,7 +117,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -155,15 +148,11 @@
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -174,15 +163,18 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../cv.html">Brief CV</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../members.html">Members</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Cytnx.html">Cytnx</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Teaching</span></p>
-<ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">11310PHYS113402</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="11320PHYS114402.html">11320PHYS114402</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="11320PHYS597002.html">11320PHYS597002</a></li>
 
 
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary of physics</a></li>
@@ -194,9 +186,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -340,24 +337,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -386,9 +375,12 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a">普通物理Ａ一</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructor">Instructor</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teaching-assistant">Teaching Assistant</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time">Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-time">Lecture Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">演習課</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#room">Room</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grade">Grade</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#midterm">Midterm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final">Final</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#textbooks">Textbooks</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-mechanics">Part 1: Mechanics</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-oscillations-and-mechanical-waves">Part 2: Oscillations and Mechanical Waves</a></li>
@@ -432,13 +424,20 @@ document.write(`
 <h2>Teaching Assistant<a class="headerlink" href="#teaching-assistant" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>莊鎮銓 b06209036 {at} gmail {dot} com</p></li>
-<li><p>R311,</p></li>
+<li><p>Office: R311</p></li>
 </ul>
 </section>
-<section id="time">
-<h2>Time<a class="headerlink" href="#time" title="Link to this heading">#</a></h2>
+<section id="lecture-time">
+<h2>Lecture Time<a class="headerlink" href="#lecture-time" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>T3T4R3R4</p></li>
+</ul>
+</section>
+<section id="id1">
+<h2>演習課<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Thursday 7-8pm.</p></li>
+<li><p>Room 313</p></li>
 </ul>
 </section>
 <section id="room">
@@ -456,6 +455,20 @@ document.write(`
 <li><p>Programming and plotting are not allowed.</p></li>
 </ul>
 </li>
+</ul>
+</section>
+<section id="midterm">
+<h2>Midterm<a class="headerlink" href="#midterm" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Time: <strong>10/31/2024</strong></p></li>
+<li><p>Range: Ch1-Ch14</p></li>
+</ul>
+</section>
+<section id="final">
+<h2>Final<a class="headerlink" href="#final" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Time: 12/19/2024</p></li>
+<li><p>Range: Ch15-Ch21</p></li>
 </ul>
 </section>
 <section id="textbooks">
@@ -510,6 +523,25 @@ document.write(`
 </section>
 <section id="homework">
 <h2>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h2>
+<p><strong>該日上課時繳交紙本</strong></p>
+<ul class="simple">
+<li><p>Chapter 5: Problem 18, 23, 31, 42, 51. Due on 10/1</p></li>
+<li><p>Chapter 7: Problem 1, 15, 26, 31, 41. Due on 10/1</p></li>
+<li><p>Chapter 8: Problem 7, 13, 26, 40, 44. Due on 10/8</p></li>
+<li><p>Chapter 9: Problem 4, 7, 12, 22, 33, 36. Due on 10/8</p></li>
+<li><p>Chapter 10: Problem 3, 9, 16, 24, 25, 28, 33, 42. Due on 10/15</p></li>
+<li><p>Chapter 11: Problem 13, 17,24, 37, 46. Due on 10/15</p></li>
+<li><p>Chapter 12: Problem 7, 11, 14, 32, 47. Due on 10/22</p></li>
+<li><p>Chapter 13: Problem 6, 10, 17, 30, 44. Due on 10/22</p></li>
+<li><p>Chapter 14: Problem 9, 16, 31, 38, 48. Due on 10/29</p></li>
+<li><p>Chapter 15: Problem 9, 13, 16, 21, 29, 45. Due on 11/21</p></li>
+<li><p>Chapter 16: Problem 3, 8, 13, 17, 20, 28, 32, 41, 47. Due on 11/21</p></li>
+<li><p>Chapter 17: Problem 6, 9, 14, 19, 27, 31, 42, 47. Due on 11/28</p></li>
+<li><p>Chapter 18: Problem 6, 13, 25, 28, 31, 35, 38, 40. Due on 11/28</p></li>
+<li><p>Chapter 19: Problem 5, 13, 16, 20, 24, 32, 36, 40. Due on 12/5</p></li>
+<li><p>Chapter 20: Problem 1, 11, 14, 18, 25, 32, 42. Due on 12/12</p></li>
+<li><p>Chapter 21: Problem 6, 7, 15, 19, 26, 28, 33. Due on 12/19</p></li>
+</ul>
 </section>
 <section id="weekly-schedule">
 <h2>Weekly schedule<a class="headerlink" href="#weekly-schedule" title="Link to this heading">#</a></h2>
@@ -529,54 +561,54 @@ document.write(`
 <li><p>Week 3</p>
 <ul>
 <li><p>9/17/2024: 中秋節Mid-Autumn Festival (no class)</p></li>
-<li><p>9/19/2024:</p></li>
+<li><p>9/19/2024: Ch7-Ch9</p></li>
 </ul>
 </li>
 <li><p>Week 4</p>
 <ul>
-<li><p>9/24/2024: Ch12</p></li>
-<li><p>9/26/2024: Ch12</p></li>
+<li><p>9/24/2024: Ch10</p></li>
+<li><p>9/26/2024: Ch10</p></li>
 </ul>
 </li>
 <li><p>Week 5</p>
 <ul>
-<li><p>10/1/2024: Ch13</p></li>
-<li><p>10/3/2024: Ch13</p></li>
+<li><p>10/1/2024: Ch11</p></li>
+<li><p>10/3/2024: ~Ch11~ <strong>因颱風取消</strong></p></li>
 </ul>
 </li>
 <li><p>Week 6</p>
 <ul>
-<li><p>10/8/2024: Ch14</p></li>
+<li><p>10/8/2024: Ch11</p></li>
 <li><p>10/10/2024: 國慶日Double Tenth Day (no class)</p></li>
 </ul>
 </li>
 <li><p>Week 7</p>
 <ul>
-<li><p>10/15/2024:</p></li>
-<li><p>11/17/2024:</p></li>
+<li><p>10/15/2024: Ch12</p></li>
+<li><p>10/17/2024: Ch13</p></li>
 </ul>
 </li>
 <li><p>Week 8</p>
 <ul>
-<li><p>10/22/2024:</p></li>
-<li><p>11/24/2024:</p></li>
+<li><p>10/22/2024: Ch13</p></li>
+<li><p>10/24/2024: Ch14</p></li>
 </ul>
 </li>
 <li><p>Week 9</p>
 <ul>
-<li><p>10/29/2024: Midterm (Ch1-Ch14)</p></li>
+<li><p>10/29/2024: Ch14</p></li>
 <li><p>10/31/2024: Ch15</p></li>
 </ul>
 </li>
 <li><p>Week 10</p>
 <ul>
-<li><p>11/5/2024: Ch16</p></li>
+<li><p>11/5/2024: <strong>Midterm (Ch1-Ch14)</strong></p></li>
 <li><p>11/7/2024: Ch16</p></li>
 </ul>
 </li>
 <li><p>Week 11</p>
 <ul>
-<li><p>11/12/2024: Ch17</p></li>
+<li><p>11/12/2024: Ch16</p></li>
 <li><p>11/14/2024: Ch17</p></li>
 </ul>
 </li>
@@ -607,7 +639,7 @@ document.write(`
 <li><p>Week 16</p>
 <ul>
 <li><p>12/17/2024: Ch21</p></li>
-<li><p>12/19/2024: Final (Ch15-Ch21)</p></li>
+<li><p>12/19/2024: <strong>Final (Ch15-Ch21)</strong></p></li>
 </ul>
 </li>
 </ul>
@@ -654,11 +686,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="glossary.html"
+       href="11320PHYS114402.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Glossary of physics</p>
+        <p class="prev-next-title">11320PHYS114402</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -669,7 +701,8 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -683,9 +716,12 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a">普通物理Ａ一</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructor">Instructor</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teaching-assistant">Teaching Assistant</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time">Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-time">Lecture Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">演習課</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#room">Room</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grade">Grade</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#midterm">Midterm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final">Final</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#textbooks">Textbooks</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-mechanics">Part 1: Mechanics</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-oscillations-and-mechanical-waves">Part 2: Oscillations and Mechanical Waves</a></li>
@@ -746,8 +782,8 @@ By Pochung Chen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

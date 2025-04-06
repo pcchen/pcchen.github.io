@@ -5,11 +5,13 @@
 * [Pochung Chen@Google Scholar](https://scholar.google.com.tw/citations?hl=en&user=blbepnIAAAAJ&view_op=list_works&sortby=pubdate)
 
 ## Preprints
-* Kai-Hsin Wu, Chang-Teng Lin, Ke Hsu, Hao-Ti Hung, Manuel Schneider, Chia-Min Chung, Ying-Jer Kao, **Pochung Chen**,<br>*The Cytnx Library for Tensor Networks*, [arXiv:2401.01921](https://arxiv.org/abs/2401.01921), submitted to [SciPost Physics Codebases](https://scipost.org/submissions/scipost_202312_00013v1/).
+* Amrita Ghosh, Mugdha Sarkar, Ying-Jer Kao, **Pochung Chen**, <br>*Learning phases with Quantum Monte Carlo simulation cell* [arXiv:2503.23098](https://arxiv.org/abs/2503.23098)
 
 * Debasmita Maiti, Sing-Hong Chan, **Pochung Chen**, <br>*Tensor Network Finite-Size Scaling for Two-Dimensional 3-state Clock Model* [arXiv:2312.14002](https://arxiv.org/abs/2312.14002).
 
 ## Peer Reviewed Publications
+* [45] Kai-Hsin Wu, Chang-Teng Lin, Ke Hsu, Hao-Ti Hung, Manuel Schneider, Chia-Min Chung, Ying-Jer Kao, **Pochung Chen**,<br>*The Cytnx Library for Tensor Networks*, [SciPost Phys. Codebases 53 (2025)](https://www.scipost.org/SciPostPhysCodeb.53).
+
 * [44] Yen-Tung Lin,Shao-Fu Liu, **Pochung Chen**, Yu-Cheng Lin,
 <br>*Random singlets and permutation symmetry in the disordered spin-2 Heisenberg chain: A tensor network renormalization group study*, [Phys. Rev. Research 5, 043249 (2023)](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.043249).
 

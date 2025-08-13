@@ -21,7 +21,7 @@ parts:
     - file: Cytnx
   # - caption: Teaching
     # - file: teaching/11310PHYS113402
-    - file: teaching/11320PHYS114402
+    # - file: teaching/11320PHYS114402
     - file: teaching/11410PHYS113402
     - file: teaching/11410PHYS401200
     # - file: teaching/glossary

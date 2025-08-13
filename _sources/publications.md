@@ -5,7 +5,9 @@
 * [Pochung Chen@Google Scholar](https://scholar.google.com.tw/citations?hl=en&user=blbepnIAAAAJ&view_op=list_works&sortby=pubdate)
 
 ## Preprints
-* Amrita Ghosh, Mugdha Sarkar, Ying-Jer Kao, **Pochung Chen**, <br>*Learning phases with Quantum Monte Carlo simulation cell*, [arXiv:2503.23098](https://arxiv.org/abs/2503.23098)
+* Mrinal Kanti Giri, **Pochung Chen**, <br>*Digital Quantum Simulation of Flat-Band and All-Bands-Flat Dynamics for Tunable Quantum Transport*, [arXiv:2508.08734](https://arxiv.org/abs/2508.08734).
+
+* Amrita Ghosh, Mugdha Sarkar, Ying-Jer Kao, **Pochung Chen**, <br>*Learning phases with Quantum Monte Carlo simulation cell*, [arXiv:2503.23098](https://arxiv.org/abs/2503.23098).
 
 ## Peer Reviewed Publications
 * [46] Debasmita Maiti, Sing-Hong Chan, **Pochung Chen**, <br>*Tensor Network Finite-Size Scaling for Two-Dimensional 3-state Clock Model* [NJP 2025](hhttps://iopscience.iop.org/article/10.1088/1367-2630/add048).

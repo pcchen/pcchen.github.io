@@ -10,7 +10,7 @@
 * Amrita Ghosh, Mugdha Sarkar, Ying-Jer Kao, **Pochung Chen**, <br>*Learning phases with Quantum Monte Carlo simulation cell*, [arXiv:2503.23098](https://arxiv.org/abs/2503.23098).
 
 ## Peer Reviewed Publications
-* [46] Debasmita Maiti, Sing-Hong Chan, **Pochung Chen**, <br>*Tensor Network Finite-Size Scaling for Two-Dimensional 3-state Clock Model* [NJP 2025](hhttps://iopscience.iop.org/article/10.1088/1367-2630/add048).
+* [46] Debasmita Maiti, Sing-Hong Chan, **Pochung Chen**, <br>*Tensor Network Finite-Size Scaling for Two-Dimensional 3-state Clock Model* [New J. Phys. 27 054601 (2025)](hhttps://iopscience.iop.org/article/10.1088/1367-2630/add048).
 
 * [45] Kai-Hsin Wu, Chang-Teng Lin, Ke Hsu, Hao-Ti Hung, Manuel Schneider, Chia-Min Chung, Ying-Jer Kao, **Pochung Chen**,<br>*The Cytnx Library for Tensor Networks*, [SciPost Phys. Codebases 53 (2025)](https://www.scipost.org/SciPostPhysCodeb.53).
 

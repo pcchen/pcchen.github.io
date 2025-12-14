@@ -21,8 +21,8 @@
   * **Postdoctoral Researcher**, Department of Chemistry, University of California Berkeley, USA.
 
 ## Other Positions
-* 2022-Now
-  * **Board of directors** and **director of division of publication**, [The Physical Society of Taiwan](https://www.ps-taiwan.org/en), Taiwan.
+* 2024-Now
+  * **Board of directors**, [The Physical Society of Taiwan](https://www.ps-taiwan.org/en), Taiwan.
 
 * 2022-Now
   * **Director**, [Physics Research Promotion Center(PRPC)](http://prpc.phys.nthu.edu.tw), Taiwan.
@@ -33,6 +33,9 @@
 
 * 2021-Now
   * **Director**, [Center for Theory and Computation(CTC)](http://www.ctc.nthu.edu.tw/), National Tsing Hua University, Taiwan.
+
+* 2022-2024
+  * **Board of directors** and **director of division of publication**, [The Physical Society of Taiwan](https://www.ps-taiwan.org/en), Taiwan.
 
 * 2021-2023
   * **Center Scientist** and **coordinator**, [TG4.1: High-performance computation and machine learning](https://www.phys.ncts.ntu.edu.tw/en/program/Thematic_Groups/TG4_1), Physics Division, National Center for Theoretical Sciences, Taiwan.

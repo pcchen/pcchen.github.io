@@ -8,9 +8,9 @@
 * Mrinal Kanti Giri, **Pochung Chen**, <br>*Digital Quantum Simulation of Flat-Band and All-Bands-Flat Dynamics for Tunable Quantum Transport*, [arXiv:2508.08734](https://arxiv.org/abs/2508.08734).
 
 ## Peer Reviewed Publications
-* [47] Amrita Ghosh, Mugdha Sarkar, Ying-Jer Kao, **Pochung Chen**, <br>*Learning phases with Quantum Monte Carlo simulation cell*, DOI 10.1088/2632-2153/ae107c [Machine Learning: Science and Technology](), [arXiv:2503.23098](https://arxiv.org/abs/2503.23098). Accepted, Machine Learning: Science and Technology.
+* [47] Amrita Ghosh, Mugdha Sarkar, Ying-Jer Kao, **Pochung Chen**, <br>*Learning phases with Quantum Monte Carlo simulation cell*, [Mach. Learn.: Sci. Technol. 6, 045017 (2025)](https://iopscience.iop.org/article/10.1088/2632-2153/ae107c).
 
-* [46] Debasmita Maiti, Sing-Hong Chan, **Pochung Chen**, <br>*Tensor Network Finite-Size Scaling for Two-Dimensional 3-state Clock Model* [New J. Phys. 27 054601 (2025)](hhttps://iopscience.iop.org/article/10.1088/1367-2630/add048).
+* [46] Debasmita Maiti, Sing-Hong Chan, **Pochung Chen**, <br>*Tensor Network Finite-Size Scaling for Two-Dimensional 3-state Clock Model*, [New J. Phys. 27 054601 (2025)](https://iopscience.iop.org/article/10.1088/1367-2630/add048).
 
 * [45] Kai-Hsin Wu, Chang-Teng Lin, Ke Hsu, Hao-Ti Hung, Manuel Schneider, Chia-Min Chung, Ying-Jer Kao, **Pochung Chen**,<br>*The Cytnx Library for Tensor Networks*, [SciPost Phys. Codebases 53 (2025)](https://www.scipost.org/SciPostPhysCodeb.53).
 

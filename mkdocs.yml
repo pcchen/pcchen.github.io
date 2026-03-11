@@ -37,6 +37,7 @@ nav:
   - CV: cv.md
   - Members: members.md
   - Publications: publications.md
-  - Cytnx: Cytnx.md
-  - Teaching:
-    - General Physics A (II): teaching/11420PHYS114402.md
+  # - Cytnx: Cytnx.md
+  # - Teaching:
+  #   - General Physics A (II): teaching/11420PHYS114402.md
+  - 11420PHYS114402: teaching/11420PHYS114402.md

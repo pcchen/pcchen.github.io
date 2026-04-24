@@ -5,6 +5,7 @@
 * [Pochung Chen@Google Scholar](https://scholar.google.com.tw/citations?hl=en&user=blbepnIAAAAJ&view_op=list_works&sortby=pubdate)
 
 ## Preprints
+* Sing-Hong Chan, **Pochung Chen**, <br>*Extracting conformal data from finite-size tensor-network flow in critical two-dimensional classical models*, [arXiv:2604.15749](https://arxiv.org/abs/2604.15749).
 * Mrinal Kanti Giri, **Pochung Chen**, <br>*Digital Quantum Simulation of Flat-Band and All-Bands-Flat Dynamics for Tunable Quantum Transport*, [arXiv:2508.08734](https://arxiv.org/abs/2508.08734).
 
 ## Peer Reviewed Publications

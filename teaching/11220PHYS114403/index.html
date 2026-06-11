@@ -1,0 +1,782 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Pochung Chen">
+      
+      
+        <link rel="canonical" href="https://pcchen.github.io/teaching/11220PHYS114403/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>11220PHYS114403 - Qubit Research Group</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11220phys114403" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Qubit Research Group" class="md-header__button md-logo" aria-label="Qubit Research Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Qubit Research Group
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              11220PHYS114403
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cv/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CV
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../members/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Members
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../publications/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Publications
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../11420PHYS114402/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  11420PHYS114402
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../11510PHYS522000/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Statistical Mechanics (II)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../11510PHYS595001/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  書報討論--凝態一
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Qubit Research Group" class="md-nav__button md-logo" aria-label="Qubit Research Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Qubit Research Group
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../members/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Members
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11420PHYS114402/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11420PHYS114402
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11510PHYS522000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistical Mechanics (II)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11510PHYS595001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    書報討論--凝態一
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="11220phys114403">11220PHYS114403<a class="headerlink" href="#11220phys114403" title="Permanent link">&para;</a></h1>
+<h1 id="general-physics-a-ii">General Physics A (II)<a class="headerlink" href="#general-physics-a-ii" title="Permanent link">&para;</a></h1>
+<h1 id="a">普通物理Ａ二<a class="headerlink" href="#a" title="Permanent link">&para;</a></h1>
+<h2 id="instructor">Instructor<a class="headerlink" href="#instructor" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Prof. Pochung Chen</li>
+<li>R521, Physics building</li>
+<li>pcchen {at} phys {dot} nthu {dot} edu {dot} tw</li>
+</ul>
+<h2 id="teaching-assistant">Teaching Assistant<a class="headerlink" href="#teaching-assistant" title="Permanent link">&para;</a></h2>
+<ul>
+<li>陳主倫 alan85385 {at} gmail {dot} com</li>
+<li>TA session</li>
+<li>Thursday 19:00-20:00</li>
+<li>R502A</li>
+</ul>
+<h2 id="time">Time<a class="headerlink" href="#time" title="Permanent link">&para;</a></h2>
+<ul>
+<li>T3T4R3R4</li>
+</ul>
+<h2 id="room">Room<a class="headerlink" href="#room" title="Permanent link">&para;</a></h2>
+<ul>
+<li>General II building, Room 105</li>
+</ul>
+<h2 id="grade">Grade<a class="headerlink" href="#grade" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Midterm (45%)+ final (45%) + homework (10%)</li>
+<li>Scientific calculator is allowed in the exams. (Programming and plotting are not allowed.)</li>
+</ul>
+<h2 id="textbooks">Textbooks<a class="headerlink" href="#textbooks" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.tsanghai.com.tw/book_detail.php?c=264&amp;no=3826#p=1">Physics for Scientists and Engineers &amp; with Modern Physics 10/e (Serway and Jewett)</a></li>
+<li><a href="https://github.com/quantum-visualizations/qmsolve">QMsolve: A module for solving and visualizing the Schrödinger equation</a></li>
+</ul>
+<h3 id="part-iv-electricity-and-magnetism">Part IV: ELECTRICITY AND MAGNETISM<a class="headerlink" href="#part-iv-electricity-and-magnetism" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Electric Fields.</li>
+<li>Continuous Charge Distributions and Gauss's Law.</li>
+<li>Electric Potential.</li>
+<li>Capacitance and Dielectrics.</li>
+<li>Current and Resistance.</li>
+<li>Direct Current Circuits.</li>
+<li>Magnetic Fields.</li>
+<li>Sources of the Magnetic Field.</li>
+<li>Faraday's Law.</li>
+<li>Inductance.</li>
+<li>Alternating Current Circuits.</li>
+<li>Electromagnetic Waves.</li>
+</ol>
+<h3 id="part-v-light-and-optics">Part V: LIGHT AND OPTICS.<a class="headerlink" href="#part-v-light-and-optics" title="Permanent link">&para;</a></h3>
+<ol>
+<li>The Nature of Light and the Laws of Geometric Optics.</li>
+<li>Interference of Light Waves.</li>
+<li>Diffraction Patterns and Polarization.</li>
+</ol>
+<h3 id="part-vi-modern-physics">Part VI: MODERN PHYSICS.<a class="headerlink" href="#part-vi-modern-physics" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Relativity.</li>
+<li>Introduction to Quantum Physics.</li>
+<li>Quantum Mechanics.</li>
+<li>Atomic Physics.</li>
+</ol>
+<h2 id="homework">Homework<a class="headerlink" href="#homework" title="Permanent link">&para;</a></h2>
+<ul>
+<li>HW1, due on 3/7/2024</li>
+<li>Chapter 22: Pb 23, 28, 33, 41.</li>
+<li>Chapter 23: Pb 6, 22, 32, 49.</li>
+<li>HW2, due on 3/14/2024</li>
+<li>Chapter 24: Pb 9, 23, 25, 45.</li>
+<li>Chapter 25: Pb 10, 29, 30, 39.</li>
+<li>HW3, due on 3/21/2024</li>
+<li>Chapter 26: Pb 19, 28, 37, 45.</li>
+<li>Chapter 27: Pb 4, 8, 17, 25, 35.</li>
+<li>HW4, due on 4/11/2024</li>
+<li>Chapter 28: Pb 17, 23, 34, 41.</li>
+<li>Chapter 29: Pb 4, 15, 22, 25, 29.</li>
+<li>HW5, due on 4/11/2024</li>
+<li>Chapter 30: Pb 4, 15, 22, 44.</li>
+<li>Chapter 31: Pb 15, 16, 23, 27, 29.</li>
+<li>HW6, due on 4/18/2024</li>
+<li>Chapter 32: Pb 6, 12, 15, 21, 31.</li>
+<li>
+<p>Chapter 33: Pb 1, 2, 10, 12.</p>
+</li>
+<li>
+<p>HW7, due on 5/9/2024</p>
+</li>
+<li>Chapter 34: Pb 6, 10, 25, 45</li>
+<li>
+<p>Chapter 36: Pb 10, 16, 22, 35</p>
+</li>
+<li>
+<p>HW8, due on 5/30/2024</p>
+</li>
+<li>Chapter 37:Pb 7, 10</li>
+<li>
+<p>Chapter 38: Pb 9, 17, 20, 23, 38</p>
+</li>
+<li>
+<p>HW9, due on 6/6/2024</p>
+</li>
+<li>Chapter 39: Pb 2, 11, 15, 27, 41</li>
+<li>
+<p>Chapter 40: Pb 1, 11, 15, 26, 30</p>
+</li>
+<li>
+<p>HW10, due on 6/11/2024</p>
+</li>
+<li>Chapter 41: Pb 3, 7, 12, 18, 19, 26</li>
+<li>Chapter 42: Pb 3, 7, 18, 27, 32</li>
+</ul>
+<h2 id="weekly-schedule">Weekly schedule<a class="headerlink" href="#weekly-schedule" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Week 1</li>
+<li>2/20/2024: Chapter 22 Electric Fields.</li>
+<li>2/22/2024: Chapter 23 Continuous Charge Distributions and Gauss's Law.</li>
+<li>Week 2</li>
+<li>2/27/2024: Chapter 24 Electric Potential.</li>
+<li>3/1/2024: Chapter 25 Capacitance and Dielectrics</li>
+<li>Week 3</li>
+<li>3/5/2024: Chapter 26 Current and Resistance.</li>
+<li>3/7/2024: Chapter 27 Direct-Current Circuits.</li>
+<li>Week 4</li>
+<li>3/12/2024: Chapter 28 Magnetic Fields.</li>
+<li>3/14/2024: Chapter 29 Sources of the Magnetic Field.</li>
+<li>Week 5</li>
+<li>3/19/2024: Chapter 30 Faraday's Law.</li>
+<li>3/21/2024: Chapter 31 Inductance.</li>
+<li>Week 6</li>
+<li>3/26/2024: Chapter 32 No class.</li>
+<li>3/28/2024: Chapter 33 Chapter 32 Alternating-Current Circuits.</li>
+<li>Week 7</li>
+<li>4/2/2024: No class.</li>
+<li>4/4/2024: No class.</li>
+<li>Week 8</li>
+<li>4/9/2024: Chapter 33 Electromagnetic Waves.</li>
+<li>4/11/2024: Chapter 34 The Nature of Light.</li>
+<li>Week 9</li>
+<li>4/16/2024: Chapter 34 The Nature of Light.</li>
+<li>4/18/2024: <strong>Midterm Exam.</strong>**</li>
+<li>Week 10</li>
+<li>4/23/2024: Chapter 36 Wave Optics.</li>
+<li>4/25/2024: Chapter 36 Wave Optics</li>
+<li>Week 11</li>
+<li>4/30/2024: Chapter 38 Relativity.</li>
+<li>5/2/2024: Chapter 38 Relativity.</li>
+<li>Week 12</li>
+<li>5/7/2024: Chapter 38 Relativity.</li>
+<li>5/9/2024: Chapter 38 Relativity.</li>
+<li>Week 13</li>
+<li>5/14/2024: Chapter 39 Introduction to Quantum Physics.</li>
+<li>5/16/2024: Chapter 39 Introduction to Quantum Physics.</li>
+<li>Week 14</li>
+<li>5/21/2024: Chapter 40 Quantum Mechanics.</li>
+<li>5/23/2024: Chapter 40 Quantum Mechanics.</li>
+<li>Week 15</li>
+<li>5/28/2024: Chapter 41 Atomic Physics.</li>
+<li>5/30/2024: Chapter 41 Atomic Physics.</li>
+<li>Week 16</li>
+<li>6/4/2024: Chapter 41 Atomic Physics.</li>
+<li>6/6/2024: <strong>Final exam.</strong></li>
+<li>Week 17</li>
+<li>6/11/2024: Review of final exam.</li>
+<li>6/13/2024:</li>
+<li>Week 18</li>
+<li>6/18/2024:</li>
+<li>6/20/2024:</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

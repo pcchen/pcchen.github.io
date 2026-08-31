@@ -7,10 +7,11 @@
 ## Preprints
 * Mrinal Kanti Giri, Shih Tai-Ming, Pinaki Sengupta, **Pochung Chen**, <br>
 *Quantum Simulation of Detuning-Controlled Proximity-Induced Localization and Re-entrant Delocalization in a Quasiperiodic Ladder*.
-* Sing-Hong Chan, **Pochung Chen**, <br>*Extracting conformal data from finite-size tensor-network flow in critical two-dimensional classical models*, [arXiv:2604.15749](https://arxiv.org/abs/2604.15749).
 
 ## Peer Reviewed Publications
-* [48] Mrinal Kanti Giri, **Pochung Chen**, <br>*Digital Quantum Simulation of Flat-Band and All-Bands-Flat Dynamics for Tunable Quantum Transport*, [arXiv:2508.08734](https://arxiv.org/abs/2508.08734), Quantum Science and Technology, to appear.
+* [49] Sing-Hong Chan, **Pochung Chen**, <br>*Extracting conformal data from finite-size tensor-network flow in critical two-dimensional classical models*, [Phys. Rev. Research](https://journals.aps.org/prresearch/accepted/10.1103/sp3b-cnyg)
+
+* [48] Mrinal Kanti Giri, **Pochung Chen**, <br>*Digital Quantum Simulation of Flat-Band and All-Bands-Flat Dynamics for Tunable Quantum Transport*, [Quantum Sci. Technol. **11**, 035064 (2026).](https://iopscience.iop.org/article/10.1088/2058-9565/ae9007)
 
 * [47] Amrita Ghosh, Mugdha Sarkar, Ying-Jer Kao, **Pochung Chen**, <br>*Learning phases with Quantum Monte Carlo simulation cell*, [Mach. Learn.: Sci. Technol. 6, 045017 (2025)](https://iopscience.iop.org/article/10.1088/2632-2153/ae107c).
 

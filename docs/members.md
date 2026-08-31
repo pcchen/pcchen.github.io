@@ -8,7 +8,7 @@
 
 
 ## Current Members
-* Chen-Yu Chih 池晨瑜 (Master program 2025/9-present, Master Student)
+* Chen-Yu Chih 池晨瑜 (Master program 2025/9-present)
 * Shih Tai-Ming 石泰銘 (Master program 2024/9-present)
 * Yen-Tung Lin 林彥彤 (Ph.D. program 2020/9-present)
 * Sing-Hong Chan 陳星宏 (Master 2020/9-2023/7, Ph.D. Program 2023/9-present)
@@ -34,8 +34,8 @@
 
 ## Former Members
 * Dr. Debasmita Maiti (Postdoc, 2021-2023)
-* 陳威伸 (Master program 2022/9-2024_
-* Mr. 劉少輔 Master 2019/9-2022/7)
+* 陳威伸 (Master program 2022/9-2024)
+* Mr. 劉少輔 (Master 2019/9-2022/7)
 * Yen-Hsin Wu 吳硯欣 (Undergraduate 2016/9-2018/7, Undergraduate)
     *  2018/9-present, NTU, Taiwan, Master Program.
 * Dr. Yi-hao Jhu [朱奕豪博士](https://www.linkedin.com/in/%E5%A5%95%E8%B1%AA-%E6%9C%B1-270764147/) (Master 2008/9-2010/7, Ph.D. 2010/9-2016/7, Postdoc 2016/9-2017/8)

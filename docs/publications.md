@@ -9,7 +9,7 @@
 *Quantum Simulation of Detuning-Controlled Proximity-Induced Localization and Re-entrant Delocalization in a Quasiperiodic Ladder*.
 
 ## Peer Reviewed Publications
-* [49] Sing-Hong Chan, **Pochung Chen**, <br>*Extracting conformal data from finite-size tensor-network flow in critical two-dimensional classical models*, [Phys. Rev. Research](https://link.aps.org/doi/10.1103/sp3b-cnyg)
+* [49] Sing-Hong Chan, **Pochung Chen**, <br>*Extracting conformal data from finite-size tensor-network flow in critical two-dimensional classical models*, [Phys. Rev. Research **8**, 033297 (2026)](https://link.aps.org/doi/10.1103/sp3b-cnyg)
 
 * [48] Mrinal Kanti Giri, **Pochung Chen**, <br>*Digital Quantum Simulation of Flat-Band and All-Bands-Flat Dynamics for Tunable Quantum Transport*, [Quantum Sci. Technol. **11**, 035064 (2026).](https://iopscience.iop.org/article/10.1088/2058-9565/ae9007)
 

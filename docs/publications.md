@@ -6,7 +6,7 @@
 
 ## Preprints
 * Mrinal Kanti Giri, Shih Tai-Ming, Pinaki Sengupta, **Pochung Chen**, <br>
-*Quantum Simulation of Detuning-Controlled Proximity-Induced Localization and Re-entrant Delocalization in a Quasiperiodic Ladder*.
+*Quantum Simulation of Detuning-Controlled Proximity-Induced Localization and Re-entrant Delocalization in a Quasiperiodic Ladder*, [arXiv:2609.37059](https://arxiv.org/abs/2609.37059)
 
 ## Peer Reviewed Publications
 * [49] Sing-Hong Chan, **Pochung Chen**, <br>*Extracting conformal data from finite-size tensor-network flow in critical two-dimensional classical models*, [Phys. Rev. Research **8**, 033297 (2026)](https://link.aps.org/doi/10.1103/sp3b-cnyg)

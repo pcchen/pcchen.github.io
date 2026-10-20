@@ -5,6 +5,10 @@
 * [Pochung Chen@Google Scholar](https://scholar.google.com.tw/citations?hl=en&user=blbepnIAAAAJ&view_op=list_works&sortby=pubdate)
 
 ## Preprints
+* Yen-Tung Lin, **Pochung Chen**, Yu-Cheng Lin, <br>
+*Random spin-3/2 antiferromagnetic Heisenberg chains revisited*,
+[arXiv.2610.24994](https://arxiv.org/abs/2610.24994)
+
 * Mrinal Kanti Giri, Shih Tai-Ming, Pinaki Sengupta, **Pochung Chen**, <br>
 *Quantum Simulation of Detuning-Controlled Proximity-Induced Localization and Re-entrant Delocalization in a Quasiperiodic Ladder*, [arXiv:2609.37059](https://arxiv.org/abs/2609.37059)
 

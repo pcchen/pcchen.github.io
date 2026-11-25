@@ -1,0 +1,735 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Pochung Chen">
+      
+      
+        <link rel="canonical" href="https://pcchen.github.io/teaching/square_ising_decimation_rg_problem/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Real-Space RG for the 2D Ising Model on a Square Lattice with Decimation - Qubit Research Group</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/nav-tabs.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#real-space-rg-for-the-2d-ising-model-on-a-square-lattice-with-decimation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Qubit Research Group" class="md-header__button md-logo" aria-label="Qubit Research Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Qubit Research Group
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Real-Space RG for the 2D Ising Model on a Square Lattice with Decimation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cv/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CV
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../members/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Members
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../publications/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Publications
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../11510PHYS522000/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Statistical Mechanics (II)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../11510PHYS595001/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Condensed Matter Seminar (I)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Qubit Research Group" class="md-nav__button md-logo" aria-label="Qubit Research Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Qubit Research Group
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../members/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Members
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11510PHYS522000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistical Mechanics (II)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11510PHYS595001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Condensed Matter Seminar (I)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="real-space-rg-for-the-2d-ising-model-on-a-square-lattice-with-decimation">Real-Space RG for the 2D Ising Model on a Square Lattice with Decimation<a class="headerlink" href="#real-space-rg-for-the-2d-ising-model-on-a-square-lattice-with-decimation" title="Permanent link">&para;</a></h1>
+<p>Consider the ferromagnetic Ising model on a two-dimensional square lattice with nearest-neighbor interactions,</p>
+<div class="arithmatex">\[
+H=-J\sum_{\langle i,j\rangle}\sigma_i\sigma_j,
+\qquad \sigma_i=\pm1,\quad J&gt;0.
+\]</div>
+<p>The partition function is</p>
+<div class="arithmatex">\[
+Z_N(K)=\sum_{\{\sigma\}}\exp\left(K\sum_{\langle i,j\rangle}\sigma_i\sigma_j\right),
+\]</div>
+<p>where <span class="arithmatex">\(K=J/(k_BT)\)</span>. Construct a real-space renormalization group (RG) transformation using the decimation method and estimate the critical temperature and critical exponents.</p>
+<h2 id="a-decimation-of-the-square-lattice">(a) Decimation of the square lattice<a class="headerlink" href="#a-decimation-of-the-square-lattice" title="Permanent link">&para;</a></h2>
+<p>Divide the lattice into two sublattices, <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, according to a checkerboard pattern. Trace out all spins belonging to sublattice <span class="arithmatex">\(B\)</span>.</p>
+<div class="highlight"><pre><span></span><code>●───○───●───○───●
+│   │   │   │   │
+○───●───○───●───○
+│   │   │   │   │
+●───○───●───○───●
+│   │   │   │   │
+○───●───○───●───○
+│   │   │   │   │
+●───○───●───○───●
+
+● : retained spin (A)
+○ : eliminated spin (B)
+</code></pre></div>
+<p>The retained sites form the following lattice (only its nearest-neighbor bonds are shown):</p>
+<div class="highlight"><pre><span></span><code>●       ●       ●
+  ╲   ╱   ╲   ╱
+    ●       ●
+  ╱   ╲   ╱   ╲
+●       ●       ●
+  ╲   ╱   ╲   ╱
+    ●       ●
+  ╱   ╲   ╱   ╲
+●       ●       ●
+</code></pre></div>
+<ol>
+<li>Show that the remaining spins form a square lattice rotated by <span class="arithmatex">\(45^\circ\)</span> relative to the original lattice.</li>
+<li>Determine the length rescaling factor <span class="arithmatex">\(b=a'/a\)</span> and the number of remaining spins <span class="arithmatex">\(N'\)</span>.</li>
+<li>Show that the partition function can be expressed as</li>
+</ol>
+<p>$$
+   Z_N(K)=\sum_{{\sigma_A}}\prod_{i\in B}2\cosh\left(K\sum_{j\in\mathrm{nn}(i)}\sigma_j\right),
+   $$</p>
+<p>where <span class="arithmatex">\(\mathrm{nn}(i)\)</span> denotes the four nearest neighbors of site <span class="arithmatex">\(i\)</span>.</p>
+<h2 id="b-effective-interactions">(b) Effective interactions<a class="headerlink" href="#b-effective-interactions" title="Permanent link">&para;</a></h2>
+<p>Consider a spin <span class="arithmatex">\(\sigma_0\)</span> on sublattice <span class="arithmatex">\(B\)</span> and its four neighboring spins, labeled cyclically.</p>
+<div class="highlight"><pre><span></span><code>       σ₁                       σ₁
+       │                       ╱│╲
+       │                      ╱ │ ╲
+σ₄ ─── σ₀ ─── σ₂    ──→    σ₄ ─── σ₂
+       │                      ╲ │ ╱
+       │                       ╲│╱
+       σ₃                       σ₃
+
+ Before decimation       Six pairwise bonds
+                         + four-spin interaction
+</code></pre></div>
+<p>After tracing out <span class="arithmatex">\(\sigma_0\)</span>, the local Boltzmann weight becomes</p>
+<div class="arithmatex">\[
+W(\sigma_1,\sigma_2,\sigma_3,\sigma_4)
+=2\cosh[K(\sigma_1+\sigma_2+\sigma_3+\sigma_4)].
+\]</div>
+<p>Show that this weight can be written exactly as</p>
+<div class="arithmatex">\[
+W=A(K)\exp\left[B(K)\sum_{1\leq i&lt;j\leq4}\sigma_i\sigma_j+C(K)\sigma_1\sigma_2\sigma_3\sigma_4\right].
+\]</div>
+<p>By considering the following three representative spin configurations, determine <span class="arithmatex">\(A(K)\)</span>, <span class="arithmatex">\(B(K)\)</span>, and <span class="arithmatex">\(C(K)\)</span> analytically.</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th style="text-align: right;"><span class="arithmatex">\(\sum_i\sigma_i\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(\sum_{i&lt;j}\sigma_i\sigma_j\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(\prod_i\sigma_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\((+,+,+,+)\)</span></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((+,+,+,-)\)</span></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((+,+,-,-)\)</span></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p>Explain why these three configurations are sufficient to determine all three coefficients.</p>
+<h2 id="c-renormalized-hamiltonian">(c) Renormalized Hamiltonian<a class="headerlink" href="#c-renormalized-hamiltonian" title="Permanent link">&para;</a></h2>
+<p>Combining the contributions from all eliminated spins, show that the renormalized Hamiltonian takes the form</p>
+<div class="arithmatex">\[
+-\beta H'=G'+K_1'\sum_{\langle i,j\rangle'}\sigma_i\sigma_j
++K_2'\sum_{\langle\!\langle i,j\rangle\!\rangle'}\sigma_i\sigma_j
++K_4'\sum_{\square'}\sigma_1\sigma_2\sigma_3\sigma_4,
+\]</div>
+<p>where the three sums represent nearest-neighbor interactions, next-nearest-neighbor interactions, and four-spin plaquette interactions generated by decimation, respectively.</p>
+<p>Determine <span class="arithmatex">\(G'\)</span>, <span class="arithmatex">\(K_1'\)</span>, <span class="arithmatex">\(K_2'\)</span>, and <span class="arithmatex">\(K_4'\)</span> in terms of <span class="arithmatex">\(A(K)\)</span>, <span class="arithmatex">\(B(K)\)</span>, <span class="arithmatex">\(C(K)\)</span>, and <span class="arithmatex">\(N\)</span>. Pay particular attention to the number of eliminated spins contributing to each effective bond. Explain why the original nearest-neighbor Ising Hamiltonian is not closed under the exact RG transformation.</p>
+<h2 id="d-approximate-rg-transformation">(d) Approximate RG transformation<a class="headerlink" href="#d-approximate-rg-transformation" title="Permanent link">&para;</a></h2>
+<p>To obtain a closed RG recursion relation involving a single coupling constant, adopt the approximation</p>
+<div class="arithmatex">\[
+K'=K_1'+K_2',
+\]</div>
+<p>and neglect the four-spin interaction <span class="arithmatex">\(K_4'\)</span>.</p>
+<p>Show that the resulting recursion relation is</p>
+<div class="arithmatex">\[
+\boxed{K'=\frac{3}{8}\ln\cosh(4K).}
+\]</div>
+<p>Discuss why this recursion relation is approximate, even though the decimation in part (b) is exact.</p>
+<h2 id="e-fixed-points-and-rg-flows">(e) Fixed points and RG flows<a class="headerlink" href="#e-fixed-points-and-rg-flows" title="Permanent link">&para;</a></h2>
+<p>Determine the fixed points of the RG transformation</p>
+<div class="arithmatex">\[
+K^*=R(K^*),\qquad R(K)=\frac{3}{8}\ln\cosh(4K).
+\]</div>
+<ol>
+<li>Identify the high-temperature and low-temperature fixed points.</li>
+<li>Find the nontrivial fixed point <span class="arithmatex">\(K^*\)</span> numerically.</li>
+<li>Determine the stability of each fixed point.</li>
+<li>Sketch the RG flow diagram.</li>
+<li>Estimate the critical temperature <span class="arithmatex">\(k_BT_c/J\)</span> and compare it with the exact result <span class="arithmatex">\(K_c=\frac12\ln(1+\sqrt{2})\)</span>.</li>
+</ol>
+<h2 id="f-critical-exponent-of-the-correlation-length">(f) Critical exponent of the correlation length<a class="headerlink" href="#f-critical-exponent-of-the-correlation-length" title="Permanent link">&para;</a></h2>
+<p>Define the deviation from the nontrivial fixed point as <span class="arithmatex">\(g=K-K^*\)</span>. Linearize the RG transformation near <span class="arithmatex">\(K^*\)</span> to obtain</p>
+<div class="arithmatex">\[
+g'=\lambda_t g+O(g^2).
+\]</div>
+<ol>
+<li>Calculate the thermal RG eigenvalue <span class="arithmatex">\(\lambda_t\)</span>.</li>
+<li>Determine the thermal scaling exponent <span class="arithmatex">\(y_t\)</span> from <span class="arithmatex">\(\lambda_t=b^{y_t}\)</span>.</li>
+<li>Using the RG transformation of the correlation length, <span class="arithmatex">\(\xi(g)=b\,\xi(g')\)</span>, derive <span class="arithmatex">\(\nu=1/y_t\)</span>.</li>
+<li>Estimate <span class="arithmatex">\(\nu\)</span> numerically and compare it with the exact Ising exponent <span class="arithmatex">\(\nu=1\)</span>.</li>
+</ol>
+<h2 id="g-free-energy-scaling-and-specific-heat">(g) Free-energy scaling and specific heat<a class="headerlink" href="#g-free-energy-scaling-and-specific-heat" title="Permanent link">&para;</a></h2>
+<p>Define the dimensionless free energy per site,</p>
+<div class="arithmatex">\[
+\phi(K)=-\frac{1}{N}\ln Z_N(K).
+\]</div>
+<ol>
+<li>Using the constant term generated during decimation, derive the recursion relation for <span class="arithmatex">\(\phi(K)\)</span> under the approximate RG transformation.</li>
+<li>Show that the singular part of the free energy satisfies</li>
+</ol>
+<p>$$
+   \phi_s(g)=b^{-2}\phi_s(b^{y_t}g).
+   $$</p>
+<ol>
+<li>Derive the hyperscaling relation <span class="arithmatex">\(\alpha=2-2\nu\)</span>.</li>
+<li>Evaluate <span class="arithmatex">\(\alpha\)</span> using your RG estimate of <span class="arithmatex">\(\nu\)</span> and compare it with the exact result <span class="arithmatex">\(\alpha=0\)</span>, corresponding to a logarithmically divergent specific heat.</li>
+</ol>
+<h2 id="h-discussion">(h) Discussion<a class="headerlink" href="#h-discussion" title="Permanent link">&para;</a></h2>
+<ul>
+<li>What happens if one retains only <span class="arithmatex">\(K_1'\)</span> instead of using <span class="arithmatex">\(K'=K_1'+K_2'\)</span>? Does the resulting RG transformation still possess a nontrivial finite-temperature fixed point?</li>
+<li>Why does iterating the exact RG transformation generate increasingly complicated interactions?</li>
+<li>How might one systematically improve the approximation?</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

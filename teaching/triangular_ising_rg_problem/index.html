@@ -1,0 +1,681 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Pochung Chen">
+      
+      
+        <link rel="canonical" href="https://pcchen.github.io/teaching/triangular_ising_rg_problem/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Problem: Real-Space Renormalization Group for the Triangular-Lattice Ising Model - Qubit Research Group</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/nav-tabs.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#problem-real-space-renormalization-group-for-the-triangular-lattice-ising-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Qubit Research Group" class="md-header__button md-logo" aria-label="Qubit Research Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Qubit Research Group
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Problem: Real-Space Renormalization Group for the Triangular-Lattice Ising Model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cv/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CV
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../members/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Members
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../publications/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Publications
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../11510PHYS522000/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Statistical Mechanics (II)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../11510PHYS595001/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Condensed Matter Seminar (I)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Qubit Research Group" class="md-nav__button md-logo" aria-label="Qubit Research Group" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Qubit Research Group
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../members/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Members
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11510PHYS522000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistical Mechanics (II)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11510PHYS595001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Condensed Matter Seminar (I)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="problem-real-space-renormalization-group-for-the-triangular-lattice-ising-model">Problem: Real-Space Renormalization Group for the Triangular-Lattice Ising Model<a class="headerlink" href="#problem-real-space-renormalization-group-for-the-triangular-lattice-ising-model" title="Permanent link">&para;</a></h1>
+<p>Consider the ferromagnetic Ising model on a two-dimensional triangular lattice,</p>
+<div class="arithmatex">\[H=-J\sum_{\langle ij\rangle}\sigma_i\sigma_j,\qquad \sigma_i=\pm1,\quad J&gt;0,\]</div>
+<p>where the sum runs over all nearest-neighbor pairs. The partition function is</p>
+<div class="arithmatex">\[Z(K)=\sum_{\{\sigma\}}\exp\left(K\sum_{\langle ij\rangle}\sigma_i\sigma_j\right),\qquad K=\frac{J}{k_BT}.\]</div>
+<p>In this problem, we construct a real-space renormalization group (RG) transformation using the majority-rule block-spin transformation and the cumulant expansion.</p>
+<h2 id="a-block-spin-transformation">(a) Block-spin transformation<a class="headerlink" href="#a-block-spin-transformation" title="Permanent link">&para;</a></h2>
+<p>Divide the triangular lattice into non-overlapping triangular blocks, each containing three nearest-neighbor spins. Denote the spins in block <span class="arithmatex">\(I\)</span> by <span class="arithmatex">\(\sigma_{I,1},\sigma_{I,2},\sigma_{I,3}\)</span>.</p>
+<p>The following diagram shows two neighboring triangular blocks (a portion of the original lattice). The solid lines denote intra-block bonds, and the dotted lines denote inter-block bonds. Other sites and bonds are omitted for clarity.</p>
+<div class="highlight"><pre><span></span><code>                J3
+               /  \
+              /    \
+    I3......J1------J2
+   /  \    :
+  /    \  :
+I1------I2
+
+  Block I     Block J
+</code></pre></div>
+<p>Under coarse graining, each triangle is replaced by a single spin:</p>
+<div class="highlight"><pre><span></span><code>       I3
+      /  \
+     /    \      majority rule
+   I1------I2  -----------------&gt;  S_I
+</code></pre></div>
+<p>The resulting block-spin lattice has the following connectivity (shown around a central block):</p>
+<div class="highlight"><pre><span></span><code>      S_1------S_2
+     /   \    /   \
+    /     \  /     \
+ S_6------S_I------S_3
+    \     /  \     /
+     \   /    \   /
+      S_5------S_4
+</code></pre></div>
+<p>Define a block spin <span class="arithmatex">\(S_I=\pm1\)</span> according to the majority rule,</p>
+<div class="arithmatex">\[S_I=\operatorname{sgn}(\sigma_{I,1}+\sigma_{I,2}+\sigma_{I,3}).\]</div>
+<ol>
+<li>Draw the original lattice and the resulting block-spin lattice.</li>
+<li>Show that the block spins form another triangular lattice.</li>
+<li>Determine the length rescaling factor <span class="arithmatex">\(b=a'/a\)</span>.</li>
+</ol>
+<p>Define the projection operator</p>
+<div class="arithmatex">\[P_I(S_I,\{\sigma_I\})=\delta_{S_I,\operatorname{sgn}(\sum_{\alpha=1}^{3}\sigma_{I,\alpha})}.\]</div>
+<p>Write down the exact expression for the renormalized Hamiltonian <span class="arithmatex">\(H'[\{S\}]\)</span> in terms of this projection operator, and show that the partition function is preserved under the transformation.</p>
+<h2 id="b-intra-block-and-inter-block-interactions">(b) Intra-block and inter-block interactions<a class="headerlink" href="#b-intra-block-and-inter-block-interactions" title="Permanent link">&para;</a></h2>
+<p>Decompose the dimensionless Hamiltonian as</p>
+<div class="arithmatex">\[-\beta H=A_0+V,\]</div>
+<p>where</p>
+<div class="arithmatex">\[A_0=K\sum_I(\sigma_{I,1}\sigma_{I,2}+\sigma_{I,2}\sigma_{I,3}+\sigma_{I,3}\sigma_{I,1})\]</div>
+<p>contains the intra-block interactions, and <span class="arithmatex">\(V\)</span> contains all inter-block nearest-neighbor interactions.</p>
+<p>For a fixed block spin <span class="arithmatex">\(S_I\)</span>, define the constrained single-block partition function</p>
+<div class="arithmatex">\[z_0(S_I)=\sum_{\{\sigma_I\}}P_I(S_I,\{\sigma_I\})e^{K(\sigma_{I,1}\sigma_{I,2}+\sigma_{I,2}\sigma_{I,3}+\sigma_{I,3}\sigma_{I,1})}.\]</div>
+<ol>
+<li>Evaluate <span class="arithmatex">\(z_0(S_I)\)</span> explicitly.</li>
+<li>Show that it is independent of <span class="arithmatex">\(S_I\)</span>.</li>
+<li>Show that the constrained expectation value of a microscopic spin can be written as</li>
+</ol>
+<p>$$ \langle\sigma_{I,\alpha}\rangle_{0,S_I}=m(K)S_I. $$</p>
+<p>Determine the function <span class="arithmatex">\(m(K)\)</span>.</p>
+<ol>
+<li>Calculate the intra-block correlation function</li>
+</ol>
+<p>$$ \langle\sigma_{I,\alpha}\sigma_{I,\gamma}\rangle_{0,S_I}=c(K),\qquad \alpha\ne\gamma. $$</p>
+<h2 id="c-cumulant-expansion">(c) Cumulant expansion<a class="headerlink" href="#c-cumulant-expansion" title="Permanent link">&para;</a></h2>
+<p>Introduce a parameter <span class="arithmatex">\(\epsilon\)</span> multiplying the inter-block interaction, such that</p>
+<div class="arithmatex">\[-\beta H=A_0+\epsilon V.\]</div>
+<p>Define the constrained expectation value</p>
+<div class="arithmatex">\[\langle X\rangle_{0,\{S\}}=\frac{\sum_{\{\sigma\}}X e^{A_0}\prod_I P_I}{\sum_{\{\sigma\}}e^{A_0}\prod_I P_I}.\]</div>
+<p>Show that the renormalized Hamiltonian satisfies</p>
+<div class="arithmatex">\[-\beta H'[\{S\}]=N_b\ln z_0+\ln\left\langle e^{\epsilon V}\right\rangle_{0,\{S\}},\]</div>
+<p>where <span class="arithmatex">\(N_b\)</span> is the number of blocks.</p>
+<p>Expand this expression up to second order in <span class="arithmatex">\(\epsilon\)</span>, using the cumulant expansion.</p>
+<p>Explain why the expectation values of microscopic spins belonging to different blocks factorize under the unperturbed ensemble.</p>
+<h2 id="d-first-order-rg-recursion-relation">(d) First-order RG recursion relation<a class="headerlink" href="#d-first-order-rg-recursion-relation" title="Permanent link">&para;</a></h2>
+<p>Retain only the first cumulant and set <span class="arithmatex">\(\epsilon=1\)</span>.</p>
+<p>Using the geometry of the triangular lattice, show that two nearest-neighbor blocks are connected by two microscopic bonds.</p>
+<p>Derive the effective Hamiltonian</p>
+<div class="arithmatex">\[-\beta H'=C(K)+K'\sum_{\langle IJ\rangle}S_IS_J\]</div>
+<p>and obtain the RG recursion relation</p>
+<div class="arithmatex">\[K'=R(K).\]</div>
+<p>Express <span class="arithmatex">\(R(K)\)</span> explicitly in terms of <span class="arithmatex">\(K\)</span>.</p>
+<h2 id="e-fixed-points-and-rg-flows">(e) Fixed points and RG flows<a class="headerlink" href="#e-fixed-points-and-rg-flows" title="Permanent link">&para;</a></h2>
+<p>Using the recursion relation obtained in part (d):</p>
+<ol>
+<li>Find all fixed points in the ferromagnetic regime, <span class="arithmatex">\(K\geq0\)</span> (including the zero-temperature limit).</li>
+<li>Determine their stability.</li>
+<li>Sketch the RG flow in the parameter space.</li>
+<li>Estimate the critical temperature <span class="arithmatex">\(T_c\)</span> and compare it with the exact result for the triangular-lattice Ising model,</li>
+</ol>
+<p>$<span class="arithmatex">\(\frac{k_BT_c^{\mathrm{exact}}}{J}=\frac{4}{\ln3}.\)</span>$</p>
+<h2 id="f-correlation-length-critical-exponent">(f) Correlation-length critical exponent<a class="headerlink" href="#f-correlation-length-critical-exponent" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(K^*\)</span> denote the nontrivial fixed point.</p>
+<p>Linearize the RG transformation around <span class="arithmatex">\(K^*\)</span> and show that</p>
+<div class="arithmatex">\[K'-K^*=\lambda_t(K-K^*)+O((K-K^*)^2).\]</div>
+<p>Calculate the thermal scaling eigenvalue <span class="arithmatex">\(\lambda_t\)</span>.</p>
+<p>Using the scaling relation for the correlation length (measured in lattice units),</p>
+<div class="arithmatex">\[\xi(K')=\frac{\xi(K)}{b},\]</div>
+<p>derive an expression for the correlation-length exponent <span class="arithmatex">\(\nu\)</span> in terms of <span class="arithmatex">\(\lambda_t\)</span> and <span class="arithmatex">\(b\)</span>.</p>
+<p>Evaluate <span class="arithmatex">\(\nu\)</span> numerically and compare it with the exact Ising exponent <span class="arithmatex">\(\nu=1\)</span>.</p>
+<h2 id="g-second-order-cumulant-advanced-question">(g) Second-order cumulant — advanced question<a class="headerlink" href="#g-second-order-cumulant-advanced-question" title="Permanent link">&para;</a></h2>
+<p>Consider two microscopic inter-block bonds,</p>
+<div class="arithmatex">\[v_1=K\sigma_{I,\alpha}\sigma_{J,\gamma},\qquad v_2=K\sigma_{J,\delta}\sigma_{L,\eta},\]</div>
+<p>where <span class="arithmatex">\(I,J,L\)</span> are three distinct blocks.</p>
+<p>Calculate their connected correlation function,</p>
+<div class="arithmatex">\[\langle v_1v_2\rangle_0-\langle v_1\rangle_0\langle v_2\rangle_0,\]</div>
+<p>for the two cases:</p>
+<ol>
+<li><span class="arithmatex">\(\gamma=\delta\)</span>;</li>
+<li><span class="arithmatex">\(\gamma\ne\delta\)</span>.</li>
+</ol>
+<p>Discuss what types of effective interactions are generated by the second cumulant. Is the nearest-neighbor Ising Hamiltonian closed under the RG transformation?</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
